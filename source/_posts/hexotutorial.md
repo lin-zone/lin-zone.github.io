@@ -121,3 +121,9 @@ npm install hexo-deployer-git --save
 hexo g
 hexo d
 ```
+
+### 更换主题
+
+```bash
+git clone https://github.com/blinkfox/hexo-theme-matery themes/matery
+```
