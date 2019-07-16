@@ -1,8 +1,11 @@
 ---
 title: 使用hexo搭建个人博客
-date: 2019-07-16 14:46:00
+date: 2019-07-17 01:01
+author: lin-zone
+categories: Blog
 tags:
 - hexo
+- blog
 ---
 
 准备工作
