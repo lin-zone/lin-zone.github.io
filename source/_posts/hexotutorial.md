@@ -1,7 +1,8 @@
 ---
 title: 使用hexo搭建个人博客
-date: 2019-07-16 11:39:55
-tags: hexo
+date: 2019-07-16 14:46:00
+tags:
+- hexo
 ---
 
 准备工作
@@ -83,8 +84,40 @@ hexo deploy
 ```bash
 hexo new hexotutorial
 # 编辑文章
-
+# 提交
 hexo clean
+hexo g
+hexo d
+```
+
+## 高级配置
+
+### git分支进行多终端工作
+
+添加分支`hexo`, 上传文件
+
+在仓库的`settings`中选择默认分支为`hexo`分支
+
+#### 在另一个终端
+
+安装`hexo`
+
+```bash
+npm install hexo-cli -g
+```
+
+克隆文件, 安装依赖
+
+```bash
+git clone git@github.com:lin-zone/lin-zone.github.io.git
+cd lin-zone.github.io
+npm install
+npm install hexo-deployer-git --save
+```
+
+生成, 部署
+
+```bash
 hexo g
 hexo d
 ```
