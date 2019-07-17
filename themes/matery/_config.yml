@@ -10,10 +10,6 @@ menu:
   Categories:
     url: /categories
     icon: fa-bookmark
-  Python:
-    url:
-    - /categories/python
-    icon: fa-bookmark
   Archives:
     url: /archives
     icon: fa-archive
