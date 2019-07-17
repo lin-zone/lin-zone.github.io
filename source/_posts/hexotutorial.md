@@ -95,6 +95,24 @@ hexo d
 
 ## 高级配置
 
+### 更换主题
+
+安装 hexo-theme-matery
+
+```bash
+git clone https://github.com/blinkfox/hexo-theme-matery themes/matery
+```
+
+安装插件
+
+```bash
+npm i -S hexo-prism-plugin
+npm install hexo-generator-search --save
+npm i hexo-permalink-pinyin --save
+npm i --save hexo-wordcount
+npm install hexo-generator-feed --save
+```
+
 ### git分支进行多终端工作
 
 添加分支`hexo`, 上传文件
@@ -125,8 +143,18 @@ hexo g
 hexo d
 ```
 
-### 更换主题
+可能错误
+
+`INFO No layout: index.html`
+
+原因
+
+直接在`themes`文件下克隆主题造成仓库嵌套, `git`不会上传嵌套的仓库
+
+解决
+
+删除`.git`文件并删除缓存
 
 ```bash
-git clone https://github.com/blinkfox/hexo-theme-matery themes/matery
+git rm --cached themes/matery
 ```
