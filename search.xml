@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>PostgreSQL Windows 安装</title>
+      <link href="/2019/10/21/postgresql-install/"/>
+      <url>/2019/10/21/postgresql-install/</url>
+      
+        <content type="html"><![CDATA[<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank" rel="noopener">官网地址</a></p><h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h2><ul><li>创建数据库集群</li></ul><pre class=" language-bash"><code class="language-bash">initdb -D <span class="token string">"K:\PostgreSQL\data"</span></code></pre><ul><li>启动数据库服务器</li></ul><pre class=" language-bash"><code class="language-bash">pg_ctl -D ^<span class="token string">"K^:^\PostgreSQL^\data^"</span> -l logfile start</code></pre><ul><li>注册Windows服务</li></ul><pre class=" language-bash"><code class="language-bash">pg_ctl register -N PostgreSQL -D <span class="token string">"K:\PostgreSQL\data"</span></code></pre><ul><li>注销Windows服务</li></ul><pre class=" language-bash"><code class="language-bash">pg_ctl unregister -N PostgreSQL</code></pre><h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><ul><li>客户端连接</li></ul><pre class=" language-bash"><code class="language-bash">psql -d postgres</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Database </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> postgresql </tag>
+            
+            <tag> install </tag>
+            
+            <tag> windows </tag>
+            
+            <tag> database </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用tesserocr库识别图形验证码</title>
+      <link href="/2019/10/14/tesserocr/"/>
+      <url>/2019/10/14/tesserocr/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul><li>Tesseract-OCR, 一款由Google维护的开源OCR引擎, 可用于图像识别</li><li>tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装</li></ul><h2 id="安装Tesseract-OCR"><a href="#安装Tesseract-OCR" class="headerlink" title="安装Tesseract-OCR"></a>安装Tesseract-OCR</h2><ul><li><a href="https://digi.bib.uni-mannheim.de/tesseract/" target="_blank" rel="noopener">下载Tesseract-OCR</a></li><li>将Tesseract-OCR安装路径添加到系统环境变量中</li></ul><h2 id="使用Tesseract-OCR识别验证码"><a href="#使用Tesseract-OCR识别验证码" class="headerlink" title="使用Tesseract-OCR识别验证码"></a>使用Tesseract-OCR识别验证码</h2><p><img src="https://github.com/lin-zone/lin-zone.github.io/blob/hexo/source/images/phototest.png?raw=true" alt="phototest.png"></p><pre class=" language-sh"><code class="language-sh">tesseract phototest.png result</code></pre><p><img src="https://github.com/lin-zone/lin-zone.github.io/blob/hexo/source/images/phototest.png?raw=true" alt="result.png"></p><h2 id="使用conda安装tesserocr"><a href="#使用conda安装tesserocr" class="headerlink" title="使用conda安装tesserocr"></a>使用conda安装tesserocr</h2><pre class=" language-sh"><code class="language-sh"># conda install -c simonflueckiger tesserocr, 默认版本会出错conda install -c simonflueckiger/label/tesseract-4.0.0-master tesserocr</code></pre><p>添加系统环境变量(改为Tesseract-OCR的安装路径)</p><pre class=" language-sh"><code class="language-sh">TESSDATA_PREFIX=C:\Program Files (x86)\Tesseract-OCR\tessdata\</code></pre><h2 id="使用tesserocr库识别验证码"><a href="#使用tesserocr库识别验证码" class="headerlink" title="使用tesserocr库识别验证码"></a>使用tesserocr库识别验证码</h2><pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> tesserocr<span class="token operator">>></span><span class="token operator">></span> text <span class="token operator">=</span> tesserocr<span class="token punctuation">.</span>file_to_text<span class="token punctuation">(</span><span class="token string">'phototest.png'</span><span class="token punctuation">)</span><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span>This <span class="token keyword">is</span> a lot of <span class="token number">12</span> point text to test thecor code <span class="token operator">and</span> see <span class="token keyword">if</span> it works on all typesof file format<span class="token punctuation">.</span>The quick brown dog jumped over thelazy fox<span class="token punctuation">.</span> The quick brown dog jumpedover the lazy fox<span class="token punctuation">.</span> The quick brown dogjumped over the lazy fox<span class="token punctuation">.</span> The quickbrown dog jumped over the lazy fox<span class="token punctuation">.</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tesseract </tag>
+            
+            <tag> tesserocr </tag>
+            
+            <tag> 识别验证码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 项目开发实战</title>
+      <link href="/2019/09/21/python-project-dev/"/>
+      <url>/2019/09/21/python-project-dev/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Python-开发环境"><a href="#Python-开发环境" class="headerlink" title="Python 开发环境"></a>Python 开发环境</h2><p>依赖管理工具</p><ul><li><code>pip</code></li><li><code>conda</code></li><li><code>poetry</code></li></ul><p>项目模板工具</p><ul><li><code>cookiecutter</code></li></ul><p>命令行工具</p><ul><li><code>click</code></li></ul><p>日志管理</p><ul><li><code>loguru</code></li></ul><p>版本管理</p><ul><li><code>Git</code></li></ul><p>编辑器和DEBUG工具</p><ul><li><code>Vim</code></li><li><code>PyCharm</code></li><li><code>VS Code</code></li><li><code>IPython</code></li><li><code>Jupyter</code></li><li><code>pytest</code></li></ul><h2 id="Web-开发"><a href="#Web-开发" class="headerlink" title="Web 开发"></a>Web 开发</h2><p>框架</p><ul><li><code>Flask</code></li><li><code>Django</code></li></ul><h2 id="Python-项目结构"><a href="#Python-项目结构" class="headerlink" title="Python 项目结构"></a>Python 项目结构</h2><p>Python 项目</p><ul><li>拥有一个在版本管理之下的源码目录</li><li>程序信息在setup.py中定义</li><li>在虚拟环境下运行</li></ul><p>文件结构</p><ul><li><code>setup.py</code></li><li><code>MANIFEST.in</code></li><li><code>dist/</code> - 源码程序包</li><li><code>README.md</code> - 项目介绍</li><li><code>requirements.txt</code> - 记录环境依赖</li></ul><h2 id="团队开发工具"><a href="#团队开发工具" class="headerlink" title="团队开发工具"></a>团队开发工具</h2><p>Git服务器</p><ul><li><code>Gitea</code></li></ul><p>项目管理系统</p><ul><li><code>Taiga</code></li></ul><p>聊天系统</p><ul><li><code>Slack</code></li></ul><h2 id="项目管理与审查"><a href="#项目管理与审查" class="headerlink" title="项目管理与审查"></a>项目管理与审查</h2><h2 id="使用Git管理源码"><a href="#使用Git管理源码" class="headerlink" title="使用Git管理源码"></a>使用Git管理源码</h2><h2 id="项目文档"><a href="#项目文档" class="headerlink" title="项目文档"></a>项目文档</h2><ul><li><code>Sphinx</code></li><li><code>MkDocs</code></li></ul><h2 id="模块分割设计与单元测试"><a href="#模块分割设计与单元测试" class="headerlink" title="模块分割设计与单元测试"></a>模块分割设计与单元测试</h2><p>设计模式</p><p>测试模块</p><ul><li><code>pytest</code></li><li><code>unittest</code></li><li><code>testfixtures</code></li><li><code>pytest-cov</code></li><li><code>xunit</code></li><li><code>pdb</code></li><li><code>mock</code></li><li><code>faker</code></li><li><code>tox</code></li></ul><h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><ul><li><code>Jenkins</code></li><li><code>Travis CI</code></li></ul><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul><li><code>Linux</code></li><li><code>Nginx</code></li><li><code>gunicorn</code></li><li><code>MySQL</code></li></ul><h2 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h2><ul><li><code>Ansible</code></li><li>备份</li></ul><h2 id="改善性能"><a href="#改善性能" class="headerlink" title="改善性能"></a>改善性能</h2><p>性能评估</p><ul><li><code>ApacheBench</code></li></ul><p>提高性能</p><ul><li><code>gunicorn</code></li><li><code>Nginx</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发实战 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用Graphviz和Pyreverse绘制Python项目结构图</title>
+      <link href="/2019/07/17/graphviz-pyreverse/"/>
+      <url>/2019/07/17/graphviz-pyreverse/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul><li><p><code>Graphviz</code>开源的图形绘制工具包</p></li><li><p><code>Pyreverse</code>分析Python代码和类关系的工具</p></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li><p>安装<code>Graphviz</code> <a href="http://www.graphviz.org/download/" target="_blank" rel="noopener">官网下载地址</a></p><p> 注意添加<code>bin/</code>目录的路径到系统路径, 测试是否安装成功</p><pre class=" language-bash"><code class="language-bash"> dot --help</code></pre></li><li><p>安装<code>Pyreverse</code></p><p> 现在<code>pyreverse</code>已经集成到<code>pylint</code>, 直接安装<code>pylint</code>即可</p><pre class=" language-bash"><code class="language-bash"> pip <span class="token function">install</span> pylint</code></pre><p> 测试是否安装成功</p><pre class=" language-bash"><code class="language-bash"> pyreverse --help</code></pre></li><li><p>使用<code>Pyreverse</code>分析Python代码</p><p> 以<code>flask/</code>代码为例</p><pre class=" language-bash"><code class="language-bash"> pyreverse flask/</code></pre><p> <code>pyreverse</code>会分析<code>flask</code>文件的代码并在当前目录下生成<code>classes.dot</code>和<code>packages.dot</code>两个<code>dot</code>格式的文件</p></li><li><p>使用<code>Graphviz</code>将<code>dot</code>文件转换为图形格式</p><p> 转换为<code>png</code>格式</p><pre class=" language-bash"><code class="language-bash"> dot -Tpng -o classes.png classes.dot dot -Tpng -o packages.png packages.dot</code></pre><p> 也可以转换为<code>jpg</code>和<code>pdf</code>格式</p><pre class=" language-bash"><code class="language-bash"> dot -Tjpg -o classes.jpg classes.dot dot -Tpdf -o packages.pdf packages.dot</code></pre><p> 生成的图形如下所示</p><p> <img src="https://github.com/lin-zone/lin-zone.github.io/blob/hexo/source/images/packages.png?raw=true" alt></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> graphviz </tag>
+            
+            <tag> pyreverse </tag>
+            
+            <tag> python </tag>
+            
+            <tag> uml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用hexo搭建个人博客</title>
+      <link href="/2019/07/17/hexotutorial/"/>
+      <url>/2019/07/17/hexotutorial/</url>
+      
+        <content type="html"><![CDATA[<p>准备工作</p><ul><li>Node.js</li><li>npm</li><li>Git</li><li>GitHub账号</li></ul><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo</code></pre><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><code>lin-zone</code>改为自己的GitHub账号</p><pre class=" language-bash"><code class="language-bash">hexo init lin-zone.github.io<span class="token function">cd</span> lin-zone.github.io<span class="token function">npm</span> <span class="token function">install</span></code></pre><h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><pre class=" language-bash"><code class="language-bash">hexo server</code></pre><p>访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p><p>配置<code>_config_yml</code></p><pre class=" language-yml"><code class="language-yml">title: #网站标题subtitle: #网站副标题author: #作者名字</code></pre><p>生成静态文件</p><pre class=" language-bash"><code class="language-bash">hexo generate</code></pre><h3 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h3><p>在GitHub新建<code>lin-zone.github.io</code>仓库</p><p>配置<code>_config.yml</code></p><pre class=" language-yml"><code class="language-yml">deploy:  type: git  repository: git@github.com:lin-zone/lin-zone.github.io.git  branch: master</code></pre><p>安装插件</p><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save</code></pre><p>提交到GitHub</p><pre class=" language-bash"><code class="language-bash">hexo deploy</code></pre><p>访问 <a href="https://lin-zone.github.io/">https://lin-zone.github.io/</a></p><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><pre class=" language-bash"><code class="language-bash">hexo new hexotutorial<span class="token comment" spellcheck="true"># 编辑文章</span><span class="token comment" spellcheck="true"># 提交</span>hexo cleanhexo ghexo d</code></pre><h2 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h2><h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>安装 hexo-theme-matery</p><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery themes/matery</code></pre><p>安装插件</p><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin<span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save<span class="token function">npm</span> i hexo-permalink-pinyin --save<span class="token function">npm</span> i --save hexo-wordcount<span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save</code></pre><h3 id="git分支进行多终端工作"><a href="#git分支进行多终端工作" class="headerlink" title="git分支进行多终端工作"></a>git分支进行多终端工作</h3><p>添加分支<code>hexo</code>, 上传文件</p><p>在仓库的<code>settings</code>中选择默认分支为<code>hexo</code>分支</p><h4 id="在另一个终端"><a href="#在另一个终端" class="headerlink" title="在另一个终端"></a>在另一个终端</h4><p>安装<code>hexo</code></p><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g</code></pre><p>克隆文件, 安装依赖</p><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone git@github.com:lin-zone/lin-zone.github.io.git<span class="token function">cd</span> lin-zone.github.io<span class="token function">npm</span> <span class="token function">install</span><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save</code></pre><p>生成, 部署</p><pre class=" language-bash"><code class="language-bash">hexo ghexo d</code></pre><p>可能错误</p><p><code>INFO No layout: index.html</code></p><p>原因</p><p>直接在<code>themes</code>文件下克隆主题造成仓库嵌套, <code>git</code>不会上传嵌套的仓库</p><p>解决</p><p>删除<code>.git</code>文件并删除缓存</p><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">rm</span> --cached themes/matery</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
