@@ -4,33 +4,21 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Python 项目开发实战, Python">
-    <meta name="description" content="Python 开发环境依赖管理工具
+    <meta name="keywords" content="poetry 使用, Python">
+    <meta name="description" content="官方文档
+安装 poetrypip install poetry
+poetry 命令
+更新 poetry
 
-pip
-conda
-poetry
+poetry self:update
 
-项目模板工具
+创建新项目
 
-cookiecutter
+poetry new &amp;lt;project&amp;gt;
 
-命令行工具
+添加包
 
-click
-
-日志管理
-
-loguru
-
-版本管理
-
-Git
-
-编辑器和DEBUG工具
-
-Vim
-PyCha">
+poetry">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -38,7 +26,7 @@ PyCha">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Python 项目开发实战 | 夜不能寐</title>
+    <title>poetry 使用 | 夜不能寐</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -204,13 +192,13 @@ PyCha">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Python 项目开发实战
+                        poetry 使用
                     </div>
                 </div>
             </div>
@@ -321,8 +309,16 @@ PyCha">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/" target="_blank">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/poetry/" target="_blank">
+                                <span class="chip bg-color">poetry</span>
+                            </a>
+                        
+                            <a href="/tags/包管理/" target="_blank">
+                                <span class="chip bg-color">包管理</span>
+                            </a>
+                        
+                            <a href="/tags/依赖管理/" target="_blank">
+                                <span class="chip bg-color">依赖管理</span>
                             </a>
                         
                     </div>
@@ -333,8 +329,8 @@ PyCha">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/开发实战/" class="post-category" target="_blank">
-                                开发实战
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
                             </a>
                         
                     </div>
@@ -345,14 +341,14 @@ PyCha">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-09-21
+                    2019-10-23
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        238
+                        264
                     </div>
                     
 
@@ -370,108 +366,114 @@ PyCha">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Python-开发环境"><a href="#Python-开发环境" class="headerlink" title="Python 开发环境"></a>Python 开发环境</h2><p>依赖管理工具</p>
+                <p><a href="https://poetry.eustace.io/docs/" target="_blank" rel="noopener">官方文档</a></p>
+<h2 id="安装-poetry"><a href="#安装-poetry" class="headerlink" title="安装 poetry"></a>安装 poetry</h2><p><code>pip install poetry</code></p>
+<h2 id="poetry-命令"><a href="#poetry-命令" class="headerlink" title="poetry 命令"></a>poetry 命令</h2><ul>
+<li>更新 poetry</li>
+</ul>
+<p><code>poetry self:update</code></p>
 <ul>
-<li><code>pip</code></li>
-<li><code>conda</code></li>
-<li><code>poetry</code></li>
+<li>创建新项目</li>
 </ul>
-<p>项目模板工具</p>
+<p><code>poetry new &lt;project&gt;</code></p>
 <ul>
-<li><code>cookiecutter</code></li>
+<li>添加包</li>
 </ul>
-<p>命令行工具</p>
+<p><code>poetry add &lt;package_name&gt;</code></p>
 <ul>
-<li><code>click</code></li>
+<li>删除包</li>
 </ul>
-<p>日志管理</p>
+<p><code>poetry remove &lt;package_name&gt;</code></p>
 <ul>
-<li><code>loguru</code></li>
+<li>安装包</li>
 </ul>
-<p>版本管理</p>
+<p><code>poetry install</code></p>
 <ul>
-<li><code>Git</code></li>
+<li>显示包信息</li>
 </ul>
-<p>编辑器和DEBUG工具</p>
+<p><code>poetry show</code></p>
 <ul>
-<li><code>Vim</code></li>
-<li><code>PyCharm</code></li>
-<li><code>VS Code</code></li>
-<li><code>IPython</code></li>
-<li><code>Jupyter</code></li>
-<li><code>pytest</code></li>
+<li>打包</li>
 </ul>
-<h2 id="Web-开发"><a href="#Web-开发" class="headerlink" title="Web 开发"></a>Web 开发</h2><p>框架</p>
+<p><code>poetry build</code></p>
 <ul>
-<li><code>Flask</code></li>
-<li><code>Django</code></li>
+<li>发布到 PyPI</li>
 </ul>
-<h2 id="Python-项目结构"><a href="#Python-项目结构" class="headerlink" title="Python 项目结构"></a>Python 项目结构</h2><p>Python 项目</p>
+<p><code>poetry publish</code></p>
 <ul>
-<li>拥有一个在版本管理之下的源码目录</li>
-<li>程序信息在setup.py中定义</li>
-<li>在虚拟环境下运行</li>
+<li>发布到个人仓库</li>
 </ul>
-<p>文件结构</p>
+<p><code>poetry publish -r &lt;my-repository&gt;</code></p>
 <ul>
-<li><code>setup.py</code></li>
-<li><code>MANIFEST.in</code></li>
-<li><code>dist/</code> - 源码程序包</li>
-<li><code>README.md</code> - 项目介绍</li>
-<li><code>requirements.txt</code> - 记录环境依赖</li>
+<li>创建<code>pyproject.toml</code>文件</li>
 </ul>
-<h2 id="团队开发工具"><a href="#团队开发工具" class="headerlink" title="团队开发工具"></a>团队开发工具</h2><p>Git服务器</p>
+<p><code>poetry init</code></p>
 <ul>
-<li><code>Gitea</code></li>
+<li>显示配置信息</li>
 </ul>
-<p>项目管理系统</p>
+<p><code>poetry config --list</code></p>
 <ul>
-<li><code>Taiga</code></li>
+<li>在虚拟环境中运行</li>
 </ul>
-<p>聊天系统</p>
+<p><code>poetry run python -V</code></p>
 <ul>
-<li><code>Slack</code></li>
+<li>生成 shell</li>
 </ul>
-<h2 id="项目管理与审查"><a href="#项目管理与审查" class="headerlink" title="项目管理与审查"></a>项目管理与审查</h2><h2 id="使用Git管理源码"><a href="#使用Git管理源码" class="headerlink" title="使用Git管理源码"></a>使用Git管理源码</h2><h2 id="项目文档"><a href="#项目文档" class="headerlink" title="项目文档"></a>项目文档</h2><ul>
-<li><code>Sphinx</code></li>
-<li><code>MkDocs</code></li>
-</ul>
-<h2 id="模块分割设计与单元测试"><a href="#模块分割设计与单元测试" class="headerlink" title="模块分割设计与单元测试"></a>模块分割设计与单元测试</h2><p>设计模式</p>
-<p>测试模块</p>
+<p><code>poetry shell</code></p>
 <ul>
-<li><code>pytest</code></li>
-<li><code>unittest</code></li>
-<li><code>testfixtures</code></li>
-<li><code>pytest-cov</code></li>
-<li><code>xunit</code></li>
-<li><code>pdb</code></li>
-<li><code>mock</code></li>
-<li><code>faker</code></li>
-<li><code>tox</code></li>
+<li>检查项目结构</li>
 </ul>
-<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><ul>
-<li><code>Jenkins</code></li>
-<li><code>Travis CI</code></li>
-</ul>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
-<li><code>Linux</code></li>
-<li><code>Nginx</code></li>
-<li><code>gunicorn</code></li>
-<li><code>MySQL</code></li>
-</ul>
-<h2 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h2><ul>
-<li><code>Ansible</code></li>
-<li>备份</li>
-</ul>
-<h2 id="改善性能"><a href="#改善性能" class="headerlink" title="改善性能"></a>改善性能</h2><p>性能评估</p>
+<p><code>poetry check</code></p>
 <ul>
-<li><code>ApacheBench</code></li>
+<li>不安装<code>pyproject.toml</code>指定的依赖</li>
 </ul>
-<p>提高性能</p>
+<p><code>poetry lock</code></p>
 <ul>
-<li><code>gunicorn</code></li>
-<li><code>Nginx</code></li>
+<li>更新项目版本</li>
 </ul>
+<p><code>poetry version &lt;rule&gt;</code></p>
+<blockquote>
+<p>rule 可以是 <code>patch, minor, major, prepatch, preminor, premajor, prerelease</code></p>
+</blockquote>
+<h2 id="pyproject-toml-文件"><a href="#pyproject-toml-文件" class="headerlink" title="pyproject.toml 文件"></a>pyproject.toml 文件</h2><ul>
+<li>定义脚本</li>
+</ul>
+<pre class=" language-toml"><code class="language-toml">[tool.poetry.scripts]
+my-script = "my_module:main"</code></pre>
+<ul>
+<li>模板文件</li>
+</ul>
+<pre class=" language-toml"><code class="language-toml">[tool.poetry]
+name = "poetry-setup"
+version = "0.3.6"
+description = "make setup.py (setutools) from pyproject.toml (poetry)"
+authors = [
+    "Gram Orsinium <master_fess@mail.ru>"
+]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/orsinium/poetry-setup"
+repository = "https://github.com/orsinium/poetry-setup"
+keywords = ["packaging", "dependency", "poetry", "setuptools", "pip"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+autopep8 = "*"
+jinja2 = "*"
+poetry = "*"
+yapf = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+
+[tool.poetry.scripts]
+poetry-setup = "poetry_setup.core:main"</code></pre>
 
             </div>
             <hr/>
@@ -509,34 +511,43 @@ PyCha">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/10/14/tesserocr/">
+                <a href="/2019/10/23/poetry/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="使用tesserocr库识别图形验证码">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="poetry 使用">
                         
-                        <span class="card-title">使用tesserocr库识别图形验证码</span>
+                        <span class="card-title">poetry 使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介
-Tesseract-OCR, 一款由Google维护的开源OCR引擎, 可用于图像识别
-tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
+                            官方文档
+安装 poetrypip install poetry
+poetry 命令
+更新 poetry
 
-安装Tesseract-OCR
+poetry self:update
 
+创建新项目
+
+poetry new &lt;project&gt;
+
+添加包
+
+poetry
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -549,19 +560,20 @@ tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tesseract/" target="_blank">
-                        <span class="chip bg-color">tesseract</span>
+                    <a href="/tags/poetry/" target="_blank">
+                        <span class="chip bg-color">poetry</span>
                     </a>
                     
-                    <a href="/tags/tesserocr/" target="_blank">
-                        <span class="chip bg-color">tesserocr</span>
+                    <a href="/tags/包管理/" target="_blank">
+                        <span class="chip bg-color">包管理</span>
                     </a>
                     
-                    <a href="/tags/识别验证码/" target="_blank">
-                        <span class="chip bg-color">识别验证码</span>
+                    <a href="/tags/依赖管理/" target="_blank">
+                        <span class="chip bg-color">依赖管理</span>
                     </a>
                     
                 </div>
@@ -575,35 +587,30 @@ tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/17/graphviz-pyreverse/">
+                <a href="/2019/10/23/cookiecutter/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="使用Graphviz和Pyreverse绘制Python项目结构图">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="模板工具cookiecutter">
                         
-                        <span class="card-title">使用Graphviz和Pyreverse绘制Python项目结构图</span>
+                        <span class="card-title">模板工具cookiecutter</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介
-Graphviz开源的图形绘制工具包
+                            
+使用cookiecutter通过项目模板创建Python项目
 
-Pyreverse分析Python代码和类关系的工具
+安装 cookiecutterpip install cookiecutter
+选择项目模板 A Pantry Full of Cookiecutters
+使用模板下载模板
 
-
-安装
-安装Graphviz 官网下载地址
- 注意添加bin/目录的路径到系统路径, 测试是否安装成功
- dot --help
-
-安装Py
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-17
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-23
                             </span>
                         <span class="publish-author">
                             
@@ -620,20 +627,16 @@ Pyreverse分析Python代码和类关系的工具
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/graphviz/" target="_blank">
-                        <span class="chip bg-color">graphviz</span>
+                    <a href="/tags/template/" target="_blank">
+                        <span class="chip bg-color">template</span>
                     </a>
                     
-                    <a href="/tags/pyreverse/" target="_blank">
-                        <span class="chip bg-color">pyreverse</span>
+                    <a href="/tags/cookiecutter/" target="_blank">
+                        <span class="chip bg-color">cookiecutter</span>
                     </a>
                     
-                    <a href="/tags/python/" target="_blank">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/uml/" target="_blank">
-                        <span class="chip bg-color">uml</span>
+                    <a href="/tags/jinja2/" target="_blank">
+                        <span class="chip bg-color">jinja2</span>
                     </a>
                     
                 </div>

@@ -4,33 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Python 项目开发实战, Python">
-    <meta name="description" content="Python 开发环境依赖管理工具
+    <meta name="keywords" content="模板工具cookiecutter, Python">
+    <meta name="description" content="
+使用cookiecutter通过项目模板创建Python项目
 
-pip
-conda
-poetry
-
-项目模板工具
-
-cookiecutter
-
-命令行工具
-
-click
-
-日志管理
-
-loguru
-
-版本管理
-
-Git
-
-编辑器和DEBUG工具
-
-Vim
-PyCha">
+安装 cookiecutterpip install cookiecutter
+选择项目模板 A Pantry Full of Cookiecutters
+使用模板下载模板
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -38,7 +19,7 @@ PyCha">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Python 项目开发实战 | 夜不能寐</title>
+    <title>模板工具cookiecutter | 夜不能寐</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -204,13 +185,13 @@ PyCha">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Python 项目开发实战
+                        模板工具cookiecutter
                     </div>
                 </div>
             </div>
@@ -321,8 +302,16 @@ PyCha">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/" target="_blank">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/template/" target="_blank">
+                                <span class="chip bg-color">template</span>
+                            </a>
+                        
+                            <a href="/tags/cookiecutter/" target="_blank">
+                                <span class="chip bg-color">cookiecutter</span>
+                            </a>
+                        
+                            <a href="/tags/jinja2/" target="_blank">
+                                <span class="chip bg-color">jinja2</span>
                             </a>
                         
                     </div>
@@ -333,8 +322,8 @@ PyCha">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/开发实战/" class="post-category" target="_blank">
-                                开发实战
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
                             </a>
                         
                     </div>
@@ -345,21 +334,21 @@ PyCha">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-09-21
+                    2019-10-23
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        238
+                        490
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        2 Min
                     </div>
                     
                 
@@ -370,107 +359,83 @@ PyCha">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Python-开发环境"><a href="#Python-开发环境" class="headerlink" title="Python 开发环境"></a>Python 开发环境</h2><p>依赖管理工具</p>
+                <blockquote>
+<p>使用cookiecutter通过项目模板创建Python项目</p>
+</blockquote>
+<h2 id="安装-cookiecutter"><a href="#安装-cookiecutter" class="headerlink" title="安装 cookiecutter"></a>安装 cookiecutter</h2><pre class=" language-bash"><code class="language-bash">pip <span class="token function">install</span> cookiecutter</code></pre>
+<p>选择项目模板 <a href="https://github.com/cookiecutter/cookiecutter/tree/db14e06a1dcc0187beeafde72685c3acef93eb68#a-pantry-full-of-cookiecutters" target="_blank" rel="noopener">A Pantry Full of Cookiecutters</a></p>
+<h2 id="使用模板"><a href="#使用模板" class="headerlink" title="使用模板"></a>使用模板</h2><p>下载模板</p>
+<pre class=" language-bash"><code class="language-bash">cookiecutter https://github.com/audreyr/cookiecutter-pypackage
+<span class="token comment" spellcheck="true"># 从GitHub下载模板</span>
+cookiecutter gh:audreyr/cookiecutter-pypackage</code></pre>
+<p>根据提示输入项目信息, 然后生成项目</p>
+<blockquote>
+<p><code>cookiecutter</code>下载的模板会保存在<code>~/.cookiecutter</code>目录下, 可以通过项目名再次使用. 项目的配置信息保存在<code>~/.cookiecutter_replay</code>目录下, 可以通过<code>--replay</code>选项从更新过的模板创建项目.</p>
+</blockquote>
+<p>使用本地模板</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 从本地生成项目</span>
+cookiecutter cookiecutter-pypackage</code></pre>
+<p>重用模板</p>
+<pre class=" language-bash"><code class="language-bash">cookiecutter --replay gh:hackebrot/cookiedozer</code></pre>
+<p>在<code>Python</code>中使用<code>cookiecutter</code></p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> cookiecutter<span class="token punctuation">.</span>main <span class="token keyword">import</span> cookiecutter
+
+<span class="token comment" spellcheck="true"># Create project from the cookiecutter-pypackage/ template</span>
+cookiecutter<span class="token punctuation">(</span><span class="token string">'cookiecutter-pypackage/'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># Create project from the cookiecutter-pypackage.git repo template</span>
+cookiecutter<span class="token punctuation">(</span><span class="token string">'https://github.com/audreyr/cookiecutter-pypackage.git'</span><span class="token punctuation">)</span></code></pre>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>创建<code>~/.cookiecutterrc</code>文件, 保存一些个人信息, 下次创建项目时就可以使用默认信息</p>
+<pre class=" language-yml"><code class="language-yml">default_context:
+    full_name: "Audrey Roy"
+    email: "audreyr@gmail.com"
+    github_username: "audreyr"
+cookiecutters_dir: "~/.cookiecutters/"</code></pre>
+<p>通过<code>--config-file</code>指定配置文件</p>
+<pre class=" language-bash"><code class="language-bash">cookiecutter --config-file /home/audreyr/my-custom-config.yaml cookiecutter-pypackage</code></pre>
+<p>或者设置系统变量<code>COOKIECUTTER_CONFIG</code></p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">export</span> COOKIECUTTER_CONFIG<span class="token operator">=</span>/home/audreyr/my-custom-config.yaml</code></pre>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p><code>cookiecutter</code>使用<code>Jinja2</code>语法将<code>cookiecutter.json</code>文件中的变量<code>name</code>替换模板文件中所有被双<code>{}</code>包裹的标签(可以是文件名, 目录名, 文件内的字符串), 然后生成项目.</p>
+<h2 id="创建模板"><a href="#创建模板" class="headerlink" title="创建模板"></a>创建模板</h2><p>项目结构</p>
+<pre class=" language-bash"><code class="language-bash">cookiecutter-something/
+├── <span class="token punctuation">{</span><span class="token punctuation">{</span>cookiecutter.project_slug<span class="token punctuation">}</span><span class="token punctuation">}</span>/
+├── hooks
+│   ├── pre_gen_project.py
+│   └── post_gen_project.py
+└── cookiecutter.json</code></pre>
 <ul>
-<li><code>pip</code></li>
-<li><code>conda</code></li>
-<li><code>poetry</code></li>
+<li><code>cookiecutter.json</code> - 设置配置变量, 变量的值也可以使用<code>Jinja2</code>语法标记, 如</li>
 </ul>
-<p>项目模板工具</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"project_name"</span><span class="token operator">:</span> <span class="token string">"My New Project"</span><span class="token punctuation">,</span>
+  <span class="token property">"project_slug"</span><span class="token operator">:</span> "<span class="token punctuation">{</span><span class="token punctuation">{</span> cookiecutter.project_name|lower|replace(' '<span class="token punctuation">,</span> '-'<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>"<span class="token punctuation">,</span>
+  <span class="token property">"pkg_name"</span><span class="token operator">:</span> "<span class="token punctuation">{</span><span class="token punctuation">{</span> cookiecutter.project_slug|replace('-'<span class="token punctuation">,</span> ''<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>"
+<span class="token punctuation">}</span></code></pre>
 <ul>
-<li><code>cookiecutter</code></li>
+<li><code>hooks/</code> - 生成项目时会执行<code>hooks</code>文件内的脚本</li>
 </ul>
-<p>命令行工具</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># hooks/pre_gen_project.py</span>
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> sys
+
+
+MODULE_REGEX <span class="token operator">=</span> r<span class="token string">'^[_a-zA-Z][_a-zA-Z0-9]+$'</span>
+
+module_name <span class="token operator">=</span> <span class="token string">'{{ cookiecutter.module_name }}'</span>
+
+<span class="token keyword">if</span> <span class="token operator">not</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span>MODULE_REGEX<span class="token punctuation">,</span> module_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'ERROR: %s is not a valid Python module name!'</span> <span class="token operator">%</span> module_name<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true"># exits with status 1 to indicate failure</span>
+    sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre>
 <ul>
-<li><code>click</code></li>
+<li>其他地方按照正常方法创建项目, 然后将需要替换的地方用<code>Jinja2</code>语法标签标记即可</li>
 </ul>
-<p>日志管理</p>
-<ul>
-<li><code>loguru</code></li>
-</ul>
-<p>版本管理</p>
-<ul>
-<li><code>Git</code></li>
-</ul>
-<p>编辑器和DEBUG工具</p>
-<ul>
-<li><code>Vim</code></li>
-<li><code>PyCharm</code></li>
-<li><code>VS Code</code></li>
-<li><code>IPython</code></li>
-<li><code>Jupyter</code></li>
-<li><code>pytest</code></li>
-</ul>
-<h2 id="Web-开发"><a href="#Web-开发" class="headerlink" title="Web 开发"></a>Web 开发</h2><p>框架</p>
-<ul>
-<li><code>Flask</code></li>
-<li><code>Django</code></li>
-</ul>
-<h2 id="Python-项目结构"><a href="#Python-项目结构" class="headerlink" title="Python 项目结构"></a>Python 项目结构</h2><p>Python 项目</p>
-<ul>
-<li>拥有一个在版本管理之下的源码目录</li>
-<li>程序信息在setup.py中定义</li>
-<li>在虚拟环境下运行</li>
-</ul>
-<p>文件结构</p>
-<ul>
-<li><code>setup.py</code></li>
-<li><code>MANIFEST.in</code></li>
-<li><code>dist/</code> - 源码程序包</li>
-<li><code>README.md</code> - 项目介绍</li>
-<li><code>requirements.txt</code> - 记录环境依赖</li>
-</ul>
-<h2 id="团队开发工具"><a href="#团队开发工具" class="headerlink" title="团队开发工具"></a>团队开发工具</h2><p>Git服务器</p>
-<ul>
-<li><code>Gitea</code></li>
-</ul>
-<p>项目管理系统</p>
-<ul>
-<li><code>Taiga</code></li>
-</ul>
-<p>聊天系统</p>
-<ul>
-<li><code>Slack</code></li>
-</ul>
-<h2 id="项目管理与审查"><a href="#项目管理与审查" class="headerlink" title="项目管理与审查"></a>项目管理与审查</h2><h2 id="使用Git管理源码"><a href="#使用Git管理源码" class="headerlink" title="使用Git管理源码"></a>使用Git管理源码</h2><h2 id="项目文档"><a href="#项目文档" class="headerlink" title="项目文档"></a>项目文档</h2><ul>
-<li><code>Sphinx</code></li>
-<li><code>MkDocs</code></li>
-</ul>
-<h2 id="模块分割设计与单元测试"><a href="#模块分割设计与单元测试" class="headerlink" title="模块分割设计与单元测试"></a>模块分割设计与单元测试</h2><p>设计模式</p>
-<p>测试模块</p>
-<ul>
-<li><code>pytest</code></li>
-<li><code>unittest</code></li>
-<li><code>testfixtures</code></li>
-<li><code>pytest-cov</code></li>
-<li><code>xunit</code></li>
-<li><code>pdb</code></li>
-<li><code>mock</code></li>
-<li><code>faker</code></li>
-<li><code>tox</code></li>
-</ul>
-<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><ul>
-<li><code>Jenkins</code></li>
-<li><code>Travis CI</code></li>
-</ul>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
-<li><code>Linux</code></li>
-<li><code>Nginx</code></li>
-<li><code>gunicorn</code></li>
-<li><code>MySQL</code></li>
-</ul>
-<h2 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h2><ul>
-<li><code>Ansible</code></li>
-<li>备份</li>
-</ul>
-<h2 id="改善性能"><a href="#改善性能" class="headerlink" title="改善性能"></a>改善性能</h2><p>性能评估</p>
-<ul>
-<li><code>ApacheBench</code></li>
-</ul>
-<p>提高性能</p>
-<ul>
-<li><code>gunicorn</code></li>
-<li><code>Nginx</code></li>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><p><a href="https://cookiecutter.readthedocs.io/en/latest/" target="_blank" rel="noopener">cookiecutter.readthedocs.io</a></p>
+</li>
+<li><p><a href="https://raphael.codes/blog/create-your-own-cookiecutter-template/" target="_blank" rel="noopener">Create a new cookiecutter template project</a></p>
+</li>
 </ul>
 
             </div>
@@ -513,29 +478,37 @@ PyCha">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/10/14/tesserocr/">
+                <a href="/2019/10/23/poetry/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="使用tesserocr库识别图形验证码">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="poetry 使用">
                         
-                        <span class="card-title">使用tesserocr库识别图形验证码</span>
+                        <span class="card-title">poetry 使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介
-Tesseract-OCR, 一款由Google维护的开源OCR引擎, 可用于图像识别
-tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
+                            官方文档
+安装 poetrypip install poetry
+poetry 命令
+更新 poetry
 
-安装Tesseract-OCR
+poetry self:update
 
+创建新项目
+
+poetry new &lt;project&gt;
+
+添加包
+
+poetry
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-14
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-23
                         </span>
                         <span class="publish-author">
                             
@@ -552,16 +525,16 @@ tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tesseract/" target="_blank">
-                        <span class="chip bg-color">tesseract</span>
+                    <a href="/tags/poetry/" target="_blank">
+                        <span class="chip bg-color">poetry</span>
                     </a>
                     
-                    <a href="/tags/tesserocr/" target="_blank">
-                        <span class="chip bg-color">tesserocr</span>
+                    <a href="/tags/包管理/" target="_blank">
+                        <span class="chip bg-color">包管理</span>
                     </a>
                     
-                    <a href="/tags/识别验证码/" target="_blank">
-                        <span class="chip bg-color">识别验证码</span>
+                    <a href="/tags/依赖管理/" target="_blank">
+                        <span class="chip bg-color">依赖管理</span>
                     </a>
                     
                 </div>
@@ -575,42 +548,41 @@ tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/17/graphviz-pyreverse/">
+                <a href="/2019/10/21/postgresql-install/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="使用Graphviz和Pyreverse绘制Python项目结构图">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="PostgreSQL Windows 安装">
                         
-                        <span class="card-title">使用Graphviz和Pyreverse绘制Python项目结构图</span>
+                        <span class="card-title">PostgreSQL Windows 安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介
-Graphviz开源的图形绘制工具包
+                            下载官网地址
+服务端
+创建数据库集群
 
-Pyreverse分析Python代码和类关系的工具
+initdb -D "K:\PostgreSQL\data"
 
+启动数据库服务器
 
-安装
-安装Graphviz 官网下载地址
- 注意添加bin/目录的路径到系统路径, 测试是否安装成功
- dot --help
+pg_ctl -D ^"K^:^\PostgreSQL^\data^" -l logfile start
 
-安装Py
+注册Wi
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-17
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                    Python
+                            <a href="/categories/Database/" class="post-category" target="_blank">
+                                    Database
                                 </a>
                             
                             
@@ -620,20 +592,20 @@ Pyreverse分析Python代码和类关系的工具
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/graphviz/" target="_blank">
-                        <span class="chip bg-color">graphviz</span>
+                    <a href="/tags/postgresql/" target="_blank">
+                        <span class="chip bg-color">postgresql</span>
                     </a>
                     
-                    <a href="/tags/pyreverse/" target="_blank">
-                        <span class="chip bg-color">pyreverse</span>
+                    <a href="/tags/install/" target="_blank">
+                        <span class="chip bg-color">install</span>
                     </a>
                     
-                    <a href="/tags/python/" target="_blank">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/windows/" target="_blank">
+                        <span class="chip bg-color">windows</span>
                     </a>
                     
-                    <a href="/tags/uml/" target="_blank">
-                        <span class="chip bg-color">uml</span>
+                    <a href="/tags/database/" target="_blank">
+                        <span class="chip bg-color">database</span>
                     </a>
                     
                 </div>

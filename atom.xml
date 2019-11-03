@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lin-zone.github.io/"/>
-  <updated>2019-10-21T16:12:15.325Z</updated>
+  <updated>2019-11-03T10:03:49.929Z</updated>
   <id>https://lin-zone.github.io/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>poetry 使用</title>
+    <link href="https://lin-zone.github.io/2019/10/23/poetry/"/>
+    <id>https://lin-zone.github.io/2019/10/23/poetry/</id>
+    <published>2019-10-23T02:15:13.000Z</published>
+    <updated>2019-11-03T10:03:49.929Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://poetry.eustace.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装-poetry&quot;&gt;&lt;a href=&quot;#安装-poetry&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://lin-zone.github.io/categories/Python/"/>
+    
+    
+      <category term="poetry" scheme="https://lin-zone.github.io/tags/poetry/"/>
+    
+      <category term="包管理" scheme="https://lin-zone.github.io/tags/%E5%8C%85%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="依赖管理" scheme="https://lin-zone.github.io/tags/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模板工具cookiecutter</title>
+    <link href="https://lin-zone.github.io/2019/10/23/cookiecutter/"/>
+    <id>https://lin-zone.github.io/2019/10/23/cookiecutter/</id>
+    <published>2019-10-23T01:34:05.000Z</published>
+    <updated>2019-11-03T10:03:49.926Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;使用cookiecutter通过项目模板创建Python项目&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;安装-cookiecutter&quot;&gt;&lt;a href=&quot;#安装-cookiecutter&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://lin-zone.github.io/categories/Python/"/>
+    
+    
+      <category term="template" scheme="https://lin-zone.github.io/tags/template/"/>
+    
+      <category term="cookiecutter" scheme="https://lin-zone.github.io/tags/cookiecutter/"/>
+    
+      <category term="jinja2" scheme="https://lin-zone.github.io/tags/jinja2/"/>
+    
+  </entry>
   
   <entry>
     <title>PostgreSQL Windows 安装</title>
@@ -53,7 +117,7 @@
     <link href="https://lin-zone.github.io/2019/10/14/tesserocr/"/>
     <id>https://lin-zone.github.io/2019/10/14/tesserocr/</id>
     <published>2019-10-14T02:13:11.000Z</published>
-    <updated>2019-11-03T09:59:49.925Z</updated>
+    <updated>2019-11-03T10:07:27.916Z</updated>
     
     <summary type="html">
     
