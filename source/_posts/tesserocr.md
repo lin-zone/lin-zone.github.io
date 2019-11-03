@@ -56,3 +56,7 @@ over the lazy fox. The quick brown dog
 jumped over the lazy fox. The quick
 brown dog jumped over the lazy fox.
 ```
+
+## GitHub仓库
+
+[sirfz/tesserocr](https://github.com/sirfz/tesserocr)
