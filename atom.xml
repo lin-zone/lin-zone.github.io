@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lin-zone.github.io/"/>
-  <updated>2019-11-03T10:03:49.929Z</updated>
+  <updated>2019-11-15T15:47:25.336Z</updated>
   <id>https://lin-zone.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hadoop Single Node Cluster 的安装</title>
+    <link href="https://lin-zone.github.io/2019/11/15/hadoop-single-node-cluster/"/>
+    <id>https://lin-zone.github.io/2019/11/15/hadoop-single-node-cluster/</id>
+    <published>2019-11-15T15:39:05.000Z</published>
+    <updated>2019-11-15T15:47:25.336Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装 JDK&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;使用 apt-get 安装 JDK&lt;/p&gt;
+&lt;pre class=&quot; language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+      <category term="Hadoop" scheme="https://lin-zone.github.io/categories/Hadoop/"/>
+    
+    
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
+    
+      <category term="hadoop" scheme="https://lin-zone.github.io/tags/hadoop/"/>
+    
+  </entry>
   
   <entry>
     <title>poetry 使用</title>
@@ -102,9 +134,9 @@
       <category term="Database" scheme="https://lin-zone.github.io/categories/Database/"/>
     
     
-      <category term="postgresql" scheme="https://lin-zone.github.io/tags/postgresql/"/>
-    
       <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
+    
+      <category term="postgresql" scheme="https://lin-zone.github.io/tags/postgresql/"/>
     
       <category term="windows" scheme="https://lin-zone.github.io/tags/windows/"/>
     
