@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>VirtualBox 启动错误</title>
+      <link href="/2019/11/15/virtualbox-error/"/>
+      <url>/2019/11/15/virtualbox-error/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Call to WHvSetupPartition failed: ERROR_SUCCESS (Last=0xc000000d/87) (VERR_NEM_VM_CREATE_FAILED).</p><p><img src="https://github.com/lin-zone/lin-zone.github.io/blob/hexo/source/images/VirtualBoxError.png?raw=true" alt="VirtualBoxError"></p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>在 Windows10下开启了Hyper-V功能, 需关闭Hyper-V并重启两次</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.virtualbox.org/ticket/18536" target="_blank" rel="noopener">Ticket #18536</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> VirtualBox </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> error </tag>
+            
+            <tag> hyper-v </tag>
+            
+            <tag> window10 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hadoop Single Node Cluster 的安装</title>
       <link href="/2019/11/15/hadoop-single-node-cluster/"/>
       <url>/2019/11/15/hadoop-single-node-cluster/</url>
@@ -105,9 +134,9 @@
       
         <tags>
             
-            <tag> install </tag>
-            
             <tag> postgresql </tag>
+            
+            <tag> install </tag>
             
             <tag> windows </tag>
             

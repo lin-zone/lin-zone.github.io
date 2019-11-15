@@ -4,18 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="PostgreSQL Windows 安装, Python">
-    <meta name="description" content="下载官网地址
-服务端
-创建数据库集群
+    <meta name="keywords" content="VirtualBox 启动错误, Python">
+    <meta name="description" content="问题Call to WHvSetupPartition failed: ERROR_SUCCESS (Last=0xc000000d/87) (VERR_NEM_VM_CREATE_FAILED).
 
-initdb -D &#34;K:\PostgreSQL\data&#34;
-
-启动数据库服务器
-
-pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
-
-注册Wi">
+解决在 Windows10下开启了Hy">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +15,7 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>PostgreSQL Windows 安装 | 夜不能寐</title>
+    <title>VirtualBox 启动错误 | 夜不能寐</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -189,13 +181,13 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        PostgreSQL Windows 安装
+                        VirtualBox 启动错误
                     </div>
                 </div>
             </div>
@@ -306,20 +298,16 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/postgresql/" target="_blank">
-                                <span class="chip bg-color">postgresql</span>
+                            <a href="/tags/error/" target="_blank">
+                                <span class="chip bg-color">error</span>
                             </a>
                         
-                            <a href="/tags/install/" target="_blank">
-                                <span class="chip bg-color">install</span>
+                            <a href="/tags/hyper-v/" target="_blank">
+                                <span class="chip bg-color">hyper-v</span>
                             </a>
                         
-                            <a href="/tags/windows/" target="_blank">
-                                <span class="chip bg-color">windows</span>
-                            </a>
-                        
-                            <a href="/tags/database/" target="_blank">
-                                <span class="chip bg-color">database</span>
+                            <a href="/tags/window10/" target="_blank">
+                                <span class="chip bg-color">window10</span>
                             </a>
                         
                     </div>
@@ -330,8 +318,8 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Database/" class="post-category" target="_blank">
-                                Database
+                            <a href="/categories/VirtualBox/" class="post-category" target="_blank">
+                                VirtualBox
                             </a>
                         
                     </div>
@@ -342,14 +330,14 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-10-21
+                    2019-11-15
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        70
+                        36
                     </div>
                     
 
@@ -367,27 +355,10 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank" rel="noopener">官网地址</a></p>
-<h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h2><ul>
-<li>创建数据库集群</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">initdb -D <span class="token string">"K:\PostgreSQL\data"</span></code></pre>
-<ul>
-<li>启动数据库服务器</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">pg_ctl -D ^<span class="token string">"K^:^\PostgreSQL^\data^"</span> -l logfile start</code></pre>
-<ul>
-<li>注册Windows服务</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">pg_ctl register -N PostgreSQL -D <span class="token string">"K:\PostgreSQL\data"</span></code></pre>
-<ul>
-<li>注销Windows服务</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">pg_ctl unregister -N PostgreSQL</code></pre>
-<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><ul>
-<li>客户端连接</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">psql -d postgres</code></pre>
+                <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Call to WHvSetupPartition failed: ERROR_SUCCESS (Last=0xc000000d/87) (VERR_NEM_VM_CREATE_FAILED).</p>
+<p><img src="https://github.com/lin-zone/lin-zone.github.io/blob/hexo/source/images/VirtualBoxError.png?raw=true" alt="VirtualBoxError"></p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>在 Windows10下开启了Hyper-V功能, 需关闭Hyper-V并重启两次</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.virtualbox.org/ticket/18536" target="_blank" rel="noopener">Ticket #18536</a></p>
 
             </div>
             <hr/>
@@ -425,60 +396,58 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/10/23/cookiecutter/">
+                <a href="/2019/11/15/virtualbox-error/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="模板工具cookiecutter">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="VirtualBox 启动错误">
                         
-                        <span class="card-title">模板工具cookiecutter</span>
+                        <span class="card-title">VirtualBox 启动错误</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-使用cookiecutter通过项目模板创建Python项目
+                            问题Call to WHvSetupPartition failed: ERROR_SUCCESS (Last=0xc000000d/87) (VERR_NEM_VM_CREATE_FAILED).
 
-安装 cookiecutterpip install cookiecutter
-选择项目模板 A Pantry Full of Cookiecutters
-使用模板下载模板
-
+解决在 Windows10下开启了Hy
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                    Python
+                            <a href="/categories/VirtualBox/" class="post-category" target="_blank">
+                                    VirtualBox
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/template/" target="_blank">
-                        <span class="chip bg-color">template</span>
+                    <a href="/tags/error/" target="_blank">
+                        <span class="chip bg-color">error</span>
                     </a>
                     
-                    <a href="/tags/cookiecutter/" target="_blank">
-                        <span class="chip bg-color">cookiecutter</span>
+                    <a href="/tags/hyper-v/" target="_blank">
+                        <span class="chip bg-color">hyper-v</span>
                     </a>
                     
-                    <a href="/tags/jinja2/" target="_blank">
-                        <span class="chip bg-color">jinja2</span>
+                    <a href="/tags/window10/" target="_blank">
+                        <span class="chip bg-color">window10</span>
                     </a>
                     
                 </div>
@@ -492,36 +461,41 @@ pg_ctl -D ^&#34;K^:^\PostgreSQL^\data^&#34; -l logfile start
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/14/tesserocr/">
+                <a href="/2019/11/15/hadoop-single-node-cluster/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="使用tesserocr库识别图形验证码">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hadoop Single Node Cluster 的安装">
                         
-                        <span class="card-title">使用tesserocr库识别图形验证码</span>
+                        <span class="card-title">Hadoop Single Node Cluster 的安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简介
-Tesseract-OCR, 一款由Google维护的开源OCR引擎, 可用于图像识别
-tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
+                            
+安装 JDK
 
-安装Tesseract-OCR
+使用 apt-get 安装 JDK
+sudo apt-get install default-jdk
 
+查询 Java 版本
+java -version
+
+查询 Java 安装路径
+update-alternatives 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                    Python
+                            <a href="/categories/Hadoop/" class="post-category" target="_blank">
+                                    Hadoop
                                 </a>
                             
                             
@@ -531,16 +505,12 @@ tesserocr, Python的OCR识别库, 基于Tesseract-OCR做的Python API封装
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tesseract/" target="_blank">
-                        <span class="chip bg-color">tesseract</span>
+                    <a href="/tags/install/" target="_blank">
+                        <span class="chip bg-color">install</span>
                     </a>
                     
-                    <a href="/tags/tesserocr/" target="_blank">
-                        <span class="chip bg-color">tesserocr</span>
-                    </a>
-                    
-                    <a href="/tags/识别验证码/" target="_blank">
-                        <span class="chip bg-color">识别验证码</span>
+                    <a href="/tags/hadoop/" target="_blank">
+                        <span class="chip bg-color">hadoop</span>
                     </a>
                     
                 </div>

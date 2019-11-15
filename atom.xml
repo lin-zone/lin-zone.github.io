@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lin-zone.github.io/"/>
-  <updated>2019-11-15T15:47:25.336Z</updated>
+  <updated>2019-11-15T15:58:38.252Z</updated>
   <id>https://lin-zone.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VirtualBox 启动错误</title>
+    <link href="https://lin-zone.github.io/2019/11/15/virtualbox-error/"/>
+    <id>https://lin-zone.github.io/2019/11/15/virtualbox-error/</id>
+    <published>2019-11-15T15:55:19.000Z</published>
+    <updated>2019-11-15T15:58:38.252Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;Call to WHvSetupPartition failed: ERROR_SUCCESS (Last=0xc000000d/87)
+        
+      
+    
+    </summary>
+    
+      <category term="VirtualBox" scheme="https://lin-zone.github.io/categories/VirtualBox/"/>
+    
+    
+      <category term="error" scheme="https://lin-zone.github.io/tags/error/"/>
+    
+      <category term="hyper-v" scheme="https://lin-zone.github.io/tags/hyper-v/"/>
+    
+      <category term="window10" scheme="https://lin-zone.github.io/tags/window10/"/>
+    
+  </entry>
   
   <entry>
     <title>Hadoop Single Node Cluster 的安装</title>
@@ -134,9 +164,9 @@
       <category term="Database" scheme="https://lin-zone.github.io/categories/Database/"/>
     
     
-      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
-    
       <category term="postgresql" scheme="https://lin-zone.github.io/tags/postgresql/"/>
+    
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
     
       <category term="windows" scheme="https://lin-zone.github.io/tags/windows/"/>
     
