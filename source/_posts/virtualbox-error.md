@@ -1,11 +1,12 @@
 ---
 title: VirtualBox 启动错误
 date: 2019-11-15 23:55:19
-categories: VirtualBox
+categories: Questions
 tags:
 - error
 - hyper-v
 - window10
+- virtualbox
 ---
 ## 问题
 
