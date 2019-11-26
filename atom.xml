@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lin-zone.github.io/"/>
-  <updated>2019-11-15T15:58:38.252Z</updated>
+  <updated>2019-11-26T17:03:53.588Z</updated>
   <id>https://lin-zone.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Gitolite搭建Git服务器</title>
+    <link href="https://lin-zone.github.io/2019/11/27/gitolite/"/>
+    <id>https://lin-zone.github.io/2019/11/27/gitolite/</id>
+    <published>2019-11-26T16:52:44.000Z</published>
+    <updated>2019-11-26T17:03:53.588Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;运行环境&quot;&gt;&lt;a href=&quot;#运行环境&quot; class=&quot;headerlink&quot; title=&quot;运行环境&quot;&gt;&lt;/a&gt;运行环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Ubuntu18.04&lt;/li&gt;
+&lt;li&gt;Gitolite&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="https://lin-zone.github.io/categories/Git/"/>
+    
+    
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
+    
+      <category term="git" scheme="https://lin-zone.github.io/tags/git/"/>
+    
+      <category term="server" scheme="https://lin-zone.github.io/tags/server/"/>
+    
+  </entry>
   
   <entry>
     <title>VirtualBox 启动错误</title>
@@ -164,9 +198,9 @@
       <category term="Database" scheme="https://lin-zone.github.io/categories/Database/"/>
     
     
-      <category term="postgresql" scheme="https://lin-zone.github.io/tags/postgresql/"/>
-    
       <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
+    
+      <category term="postgresql" scheme="https://lin-zone.github.io/tags/postgresql/"/>
     
       <category term="windows" scheme="https://lin-zone.github.io/tags/windows/"/>
     

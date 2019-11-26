@@ -4,21 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="poetry 使用, Python">
-    <meta name="description" content="官方文档
-安装 poetrypip install poetry
-poetry 命令
-更新 poetry
+    <meta name="keywords" content="使用Gitolite搭建Git服务器, Python">
+    <meta name="description" content="运行环境
+Ubuntu18.04
+Gitolite
 
-poetry self:update
-
-创建新项目
-
-poetry new &amp;lt;project&amp;gt;
-
-添加包
-
-poetry">
+1. 在云服务上选择合适的镜像, 创建好实例2. 启动实例更新系统sudo apt update
+sudo apt upgrade
+3. 安装 Vimsudo apt install v">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +19,7 @@ poetry">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>poetry 使用 | 夜不能寐</title>
+    <title>使用Gitolite搭建Git服务器 | 夜不能寐</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -192,13 +185,13 @@ poetry">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        poetry 使用
+                        使用Gitolite搭建Git服务器
                     </div>
                 </div>
             </div>
@@ -309,16 +302,16 @@ poetry">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/poetry/" target="_blank">
-                                <span class="chip bg-color">poetry</span>
+                            <a href="/tags/install/" target="_blank">
+                                <span class="chip bg-color">install</span>
                             </a>
                         
-                            <a href="/tags/包管理/" target="_blank">
-                                <span class="chip bg-color">包管理</span>
+                            <a href="/tags/git/" target="_blank">
+                                <span class="chip bg-color">git</span>
                             </a>
                         
-                            <a href="/tags/依赖管理/" target="_blank">
-                                <span class="chip bg-color">依赖管理</span>
+                            <a href="/tags/server/" target="_blank">
+                                <span class="chip bg-color">server</span>
                             </a>
                         
                     </div>
@@ -329,8 +322,8 @@ poetry">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                Python
+                            <a href="/categories/Git/" class="post-category" target="_blank">
+                                Git
                             </a>
                         
                     </div>
@@ -341,21 +334,21 @@ poetry">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-10-23
+                    2019-11-27
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        264
+                        499
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        2 Min
                     </div>
                     
                 
@@ -366,114 +359,79 @@ poetry">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a href="https://poetry.eustace.io/docs/" target="_blank" rel="noopener">官方文档</a></p>
-<h2 id="安装-poetry"><a href="#安装-poetry" class="headerlink" title="安装 poetry"></a>安装 poetry</h2><p><code>pip install poetry</code></p>
-<h2 id="poetry-命令"><a href="#poetry-命令" class="headerlink" title="poetry 命令"></a>poetry 命令</h2><ul>
-<li>更新 poetry</li>
+                <h2 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h2><ul>
+<li>Ubuntu18.04</li>
+<li>Gitolite</li>
 </ul>
-<p><code>poetry self:update</code></p>
-<ul>
-<li>创建新项目</li>
+<h2 id="1-在云服务上选择合适的镜像-创建好实例"><a href="#1-在云服务上选择合适的镜像-创建好实例" class="headerlink" title="1. 在云服务上选择合适的镜像, 创建好实例"></a>1. 在云服务上选择合适的镜像, 创建好实例</h2><h2 id="2-启动实例更新系统"><a href="#2-启动实例更新系统" class="headerlink" title="2. 启动实例更新系统"></a>2. 启动实例更新系统</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> apt update
+<span class="token function">sudo</span> apt upgrade</code></pre>
+<h2 id="3-安装-Vim"><a href="#3-安装-Vim" class="headerlink" title="3. 安装 Vim"></a>3. 安装 Vim</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> vim</code></pre>
+<h2 id="4-安装-Git"><a href="#4-安装-Git" class="headerlink" title="4. 安装 Git"></a>4. 安装 Git</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> <span class="token function">git</span></code></pre>
+<h2 id="5-创建用户"><a href="#5-创建用户" class="headerlink" title="5. 创建用户"></a>5. 创建用户</h2><ul>
+<li>创建git用户: <code>sudo adduser git</code></li>
+<li>切换到git用户: <code>su git</code></li>
+<li>进入git用户目录: <code>cd ~</code></li>
 </ul>
-<p><code>poetry new &lt;project&gt;</code></p>
-<ul>
-<li>添加包</li>
+<h2 id="6-安装-Gitolite"><a href="#6-安装-Gitolite" class="headerlink" title="6. 安装 Gitolite"></a>6. 安装 Gitolite</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/sitaramc/gitolite
+<span class="token function">mkdir</span> -p <span class="token variable">$HOME</span>/bin
+gitolite/install -to <span class="token variable">$HOME</span>/bin</code></pre>
+<h2 id="7-注册仓库管理员"><a href="#7-注册仓库管理员" class="headerlink" title="7. 注册仓库管理员"></a>7. 注册仓库管理员</h2><ul>
+<li><p>新建<code>YourName.pub</code>文件，将客户端公钥<code>.ssh/id_rsa.pub</code>复制到里面，然后注册为仓库管理员</p>
+<pre class=" language-bash"><code class="language-bash">  vim YourName.pub
+  <span class="token comment" spellcheck="true"># 复制客户端公钥内容，按:wq保存退出</span>
+  <span class="token variable">$HOME</span>/bin/gitolite setup -pk YourName.pub <span class="token comment" spellcheck="true"># 注册仓库管理员</span></code></pre>
+<p>  建议在服务器上新建<code>admin</code>用户作为仓库管理员</p>
+</li>
+<li><p>新建管理员用户<code>admin</code></p>
+<pre class=" language-bash"><code class="language-bash"> <span class="token function">sudo</span> adduser admin</code></pre>
+</li>
+<li><p>生成<code>SSH</code>公钥</p>
+<pre class=" language-bash"><code class="language-bash"> <span class="token function">su</span> admin
+ ssh-keygen -t rsa -C <span class="token string">"youremail@example.com"</span>
+ <span class="token function">cp</span> .ssh/id_rsa.pub /tmp/admin.pub</code></pre>
+</li>
+<li><p>切回<code>git</code>用户，将<code>admin</code>用户注册为仓库管理员</p>
+<pre class=" language-bash"><code class="language-bash">  <span class="token function">su</span> <span class="token function">git</span>
+  <span class="token function">cd</span> ~
+  <span class="token variable">$HOME</span>/bin/gitolite setup -pk /tmp/admin.pub</code></pre>
+<p>  注册管理员后会生成两个文件<code>projects.list</code>, <code>repositories/</code><br>  <code>projects.list</code> 保存仓库信息列表<br>  <code>repositories/</code> 文件夹里有管理员仓库<code>gitolite-admin.git/</code> 和测试仓库<code>testing.git/</code><br>  新建的仓库都会保存在<code>repositories/</code> 文件夹中  </p>
+</li>
 </ul>
-<p><code>poetry add &lt;package_name&gt;</code></p>
-<ul>
-<li>删除包</li>
-</ul>
-<p><code>poetry remove &lt;package_name&gt;</code></p>
-<ul>
-<li>安装包</li>
-</ul>
-<p><code>poetry install</code></p>
-<ul>
-<li>显示包信息</li>
-</ul>
-<p><code>poetry show</code></p>
-<ul>
-<li>打包</li>
-</ul>
-<p><code>poetry build</code></p>
-<ul>
-<li>发布到 PyPI</li>
-</ul>
-<p><code>poetry publish</code></p>
-<ul>
-<li>发布到个人仓库</li>
-</ul>
-<p><code>poetry publish -r &lt;my-repository&gt;</code></p>
-<ul>
-<li>创建<code>pyproject.toml</code>文件</li>
-</ul>
-<p><code>poetry init</code></p>
-<ul>
-<li>显示配置信息</li>
-</ul>
-<p><code>poetry config --list</code></p>
-<ul>
-<li>在虚拟环境中运行</li>
-</ul>
-<p><code>poetry run python -V</code></p>
-<ul>
-<li>生成 shell</li>
-</ul>
-<p><code>poetry shell</code></p>
-<ul>
-<li>检查项目结构</li>
-</ul>
-<p><code>poetry check</code></p>
-<ul>
-<li>不安装<code>pyproject.toml</code>指定的依赖</li>
-</ul>
-<p><code>poetry lock</code></p>
-<ul>
-<li>更新项目版本</li>
-</ul>
-<p><code>poetry version &lt;rule&gt;</code></p>
-<blockquote>
-<p>rule 可以是 <code>patch, minor, major, prepatch, preminor, premajor, prerelease</code></p>
-</blockquote>
-<h2 id="pyproject-toml-文件"><a href="#pyproject-toml-文件" class="headerlink" title="pyproject.toml 文件"></a>pyproject.toml 文件</h2><ul>
-<li>定义脚本</li>
-</ul>
-<pre class=" language-toml"><code class="language-toml">[tool.poetry.scripts]
-my-script = "my_module:main"</code></pre>
-<ul>
-<li>模板文件</li>
-</ul>
-<pre class=" language-toml"><code class="language-toml">[tool.poetry]
-name = "poetry-setup"
-version = "0.3.6"
-description = "make setup.py (setutools) from pyproject.toml (poetry)"
-authors = [
-    "Gram Orsinium <master_fess@mail.ru>"
-]
-license = "Apache-2.0"
-readme = "README.md"
-homepage = "https://github.com/orsinium/poetry-setup"
-repository = "https://github.com/orsinium/poetry-setup"
-keywords = ["packaging", "dependency", "poetry", "setuptools", "pip"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Environment :: Console",
-    "Topic :: Software Development :: Build Tools",
-    "Topic :: Software Development :: Libraries :: Python Modules"
-]
+<h2 id="8-管理远程仓库"><a href="#8-管理远程仓库" class="headerlink" title="8. 管理远程仓库"></a>8. 管理远程仓库</h2><ul>
+<li><p>在已经注册过的客户端克隆管理员仓库</p>
+<pre class=" language-bash"><code class="language-bash">  <span class="token function">git</span> clone git@host:gitolite-admin</code></pre>
+<p>  管理员仓库里有两个文件<code>conf/gitolite.conf</code> 和 <code>keydir/</code><br>  <code>gitolite.conf</code> 管理仓库信息<br>  <code>keydir/</code> 保存<code>git</code>成员的公钥  </p>
+</li>
+<li><p>添加新成员: 将新成员的公钥保存到<code>keydir/</code> 下</p>
+</li>
+<li><p>新建仓库</p>
+<p>  修改<code>conf/gitolite.conf</code> 文件，添加<code>newrepo</code>仓库</p>
+<pre class=" language-conf"><code class="language-conf">  repo gitolite-admin
+          RW+     =   admin
 
-[tool.poetry.dependencies]
-python = "^3.4"
-autopep8 = "*"
-jinja2 = "*"
-poetry = "*"
-yapf = "*"
+  repo testing
+          RW+     =   @all
 
-[tool.poetry.dev-dependencies]
-pytest = "*"
+  repo newrepo
+          RW+     =   @all</code></pre>
+</li>
+<li><p>添加仓库管理员</p>
+<pre class=" language-conf"><code class="language-conf">  repo gitolite-admin
+      RW+     =   admin
+      RW+     =   lin-zone
 
-[tool.poetry.scripts]
-poetry-setup = "poetry_setup.core:main"</code></pre>
+  repo testing
+      RW+     =   @all
+
+  repo newrepo
+      RW+     =   @all</code></pre>
+</li>
+</ul>
+<h2 id="9-将仓库信息推送到服务器"><a href="#9-将仓库信息推送到服务器" class="headerlink" title="9. 将仓库信息推送到服务器"></a>9. 将仓库信息推送到服务器</h2><p>在客户端更新完仓库信息后，需要将其推送到服务器才能生效</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
+<span class="token function">git</span> commit -m <span class="token string">"commit message"</span>
+<span class="token function">git</span> push origin master</code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/sitaramc/gitolite" target="_blank" rel="noopener">sitaramc/gitolite</a></p>
 
             </div>
             <hr/>
@@ -511,51 +469,49 @@ poetry-setup = "poetry_setup.core:main"</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/15/hadoop-single-node-cluster/">
+                <a href="/2019/11/27/gitolite/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hadoop Single Node Cluster 的安装">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="使用Gitolite搭建Git服务器">
                         
-                        <span class="card-title">Hadoop Single Node Cluster 的安装</span>
+                        <span class="card-title">使用Gitolite搭建Git服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-安装 JDK
+                            运行环境
+Ubuntu18.04
+Gitolite
 
-使用 apt-get 安装 JDK
-sudo apt-get install default-jdk
-
-查询 Java 版本
-java -version
-
-查询 Java 安装路径
-update-alternatives 
+1. 在云服务上选择合适的镜像, 创建好实例2. 启动实例更新系统sudo apt update
+sudo apt upgrade
+3. 安装 Vimsudo apt install v
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hadoop/" class="post-category" target="_blank">
-                                    Hadoop
+                            <a href="/categories/Git/" class="post-category" target="_blank">
+                                    Git
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -563,8 +519,12 @@ update-alternatives
                         <span class="chip bg-color">install</span>
                     </a>
                     
-                    <a href="/tags/hadoop/" target="_blank">
-                        <span class="chip bg-color">hadoop</span>
+                    <a href="/tags/git/" target="_blank">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/server/" target="_blank">
+                        <span class="chip bg-color">server</span>
                     </a>
                     
                 </div>
@@ -578,37 +538,33 @@ update-alternatives
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/23/cookiecutter/">
+                <a href="/2019/11/15/virtualbox-error/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="模板工具cookiecutter">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="VirtualBox 启动错误">
                         
-                        <span class="card-title">模板工具cookiecutter</span>
+                        <span class="card-title">VirtualBox 启动错误</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-使用cookiecutter通过项目模板创建Python项目
+                            问题Call to WHvSetupPartition failed: ERROR_SUCCESS (Last=0xc000000d/87) (VERR_NEM_VM_CREATE_FAILED).
 
-安装 cookiecutterpip install cookiecutter
-选择项目模板 A Pantry Full of Cookiecutters
-使用模板下载模板
-
+解决在 Windows10下开启了Hy
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-23
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                    Python
+                            <a href="/categories/VirtualBox/" class="post-category" target="_blank">
+                                    VirtualBox
                                 </a>
                             
                             
@@ -618,16 +574,16 @@ update-alternatives
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/template/" target="_blank">
-                        <span class="chip bg-color">template</span>
+                    <a href="/tags/error/" target="_blank">
+                        <span class="chip bg-color">error</span>
                     </a>
                     
-                    <a href="/tags/cookiecutter/" target="_blank">
-                        <span class="chip bg-color">cookiecutter</span>
+                    <a href="/tags/hyper-v/" target="_blank">
+                        <span class="chip bg-color">hyper-v</span>
                     </a>
                     
-                    <a href="/tags/jinja2/" target="_blank">
-                        <span class="chip bg-color">jinja2</span>
+                    <a href="/tags/window10/" target="_blank">
+                        <span class="chip bg-color">window10</span>
                     </a>
                     
                 </div>

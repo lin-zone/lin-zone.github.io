@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>使用Gitolite搭建Git服务器</title>
+      <link href="/2019/11/27/gitolite/"/>
+      <url>/2019/11/27/gitolite/</url>
+      
+        <content type="html"><![CDATA[<h2 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h2><ul><li>Ubuntu18.04</li><li>Gitolite</li></ul><h2 id="1-在云服务上选择合适的镜像-创建好实例"><a href="#1-在云服务上选择合适的镜像-创建好实例" class="headerlink" title="1. 在云服务上选择合适的镜像, 创建好实例"></a>1. 在云服务上选择合适的镜像, 创建好实例</h2><h2 id="2-启动实例更新系统"><a href="#2-启动实例更新系统" class="headerlink" title="2. 启动实例更新系统"></a>2. 启动实例更新系统</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> apt update<span class="token function">sudo</span> apt upgrade</code></pre><h2 id="3-安装-Vim"><a href="#3-安装-Vim" class="headerlink" title="3. 安装 Vim"></a>3. 安装 Vim</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> vim</code></pre><h2 id="4-安装-Git"><a href="#4-安装-Git" class="headerlink" title="4. 安装 Git"></a>4. 安装 Git</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> <span class="token function">git</span></code></pre><h2 id="5-创建用户"><a href="#5-创建用户" class="headerlink" title="5. 创建用户"></a>5. 创建用户</h2><ul><li>创建git用户: <code>sudo adduser git</code></li><li>切换到git用户: <code>su git</code></li><li>进入git用户目录: <code>cd ~</code></li></ul><h2 id="6-安装-Gitolite"><a href="#6-安装-Gitolite" class="headerlink" title="6. 安装 Gitolite"></a>6. 安装 Gitolite</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/sitaramc/gitolite<span class="token function">mkdir</span> -p <span class="token variable">$HOME</span>/bingitolite/install -to <span class="token variable">$HOME</span>/bin</code></pre><h2 id="7-注册仓库管理员"><a href="#7-注册仓库管理员" class="headerlink" title="7. 注册仓库管理员"></a>7. 注册仓库管理员</h2><ul><li><p>新建<code>YourName.pub</code>文件，将客户端公钥<code>.ssh/id_rsa.pub</code>复制到里面，然后注册为仓库管理员</p><pre class=" language-bash"><code class="language-bash">  vim YourName.pub  <span class="token comment" spellcheck="true"># 复制客户端公钥内容，按:wq保存退出</span>  <span class="token variable">$HOME</span>/bin/gitolite setup -pk YourName.pub <span class="token comment" spellcheck="true"># 注册仓库管理员</span></code></pre><p>  建议在服务器上新建<code>admin</code>用户作为仓库管理员</p></li><li><p>新建管理员用户<code>admin</code></p><pre class=" language-bash"><code class="language-bash"> <span class="token function">sudo</span> adduser admin</code></pre></li><li><p>生成<code>SSH</code>公钥</p><pre class=" language-bash"><code class="language-bash"> <span class="token function">su</span> admin ssh-keygen -t rsa -C <span class="token string">"youremail@example.com"</span> <span class="token function">cp</span> .ssh/id_rsa.pub /tmp/admin.pub</code></pre></li><li><p>切回<code>git</code>用户，将<code>admin</code>用户注册为仓库管理员</p><pre class=" language-bash"><code class="language-bash">  <span class="token function">su</span> <span class="token function">git</span>  <span class="token function">cd</span> ~  <span class="token variable">$HOME</span>/bin/gitolite setup -pk /tmp/admin.pub</code></pre><p>  注册管理员后会生成两个文件<code>projects.list</code>, <code>repositories/</code><br>  <code>projects.list</code> 保存仓库信息列表<br>  <code>repositories/</code> 文件夹里有管理员仓库<code>gitolite-admin.git/</code> 和测试仓库<code>testing.git/</code><br>  新建的仓库都会保存在<code>repositories/</code> 文件夹中  </p></li></ul><h2 id="8-管理远程仓库"><a href="#8-管理远程仓库" class="headerlink" title="8. 管理远程仓库"></a>8. 管理远程仓库</h2><ul><li><p>在已经注册过的客户端克隆管理员仓库</p><pre class=" language-bash"><code class="language-bash">  <span class="token function">git</span> clone git@host:gitolite-admin</code></pre><p>  管理员仓库里有两个文件<code>conf/gitolite.conf</code> 和 <code>keydir/</code><br>  <code>gitolite.conf</code> 管理仓库信息<br>  <code>keydir/</code> 保存<code>git</code>成员的公钥  </p></li><li><p>添加新成员: 将新成员的公钥保存到<code>keydir/</code> 下</p></li><li><p>新建仓库</p><p>  修改<code>conf/gitolite.conf</code> 文件，添加<code>newrepo</code>仓库</p><pre class=" language-conf"><code class="language-conf">  repo gitolite-admin          RW+     =   admin  repo testing          RW+     =   @all  repo newrepo          RW+     =   @all</code></pre></li><li><p>添加仓库管理员</p><pre class=" language-conf"><code class="language-conf">  repo gitolite-admin      RW+     =   admin      RW+     =   lin-zone  repo testing      RW+     =   @all  repo newrepo      RW+     =   @all</code></pre></li></ul><h2 id="9-将仓库信息推送到服务器"><a href="#9-将仓库信息推送到服务器" class="headerlink" title="9. 将仓库信息推送到服务器"></a>9. 将仓库信息推送到服务器</h2><p>在客户端更新完仓库信息后，需要将其推送到服务器才能生效</p><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span><span class="token function">git</span> commit -m <span class="token string">"commit message"</span><span class="token function">git</span> push origin master</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/sitaramc/gitolite" target="_blank" rel="noopener">sitaramc/gitolite</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> install </tag>
+            
+            <tag> git </tag>
+            
+            <tag> server </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VirtualBox 启动错误</title>
       <link href="/2019/11/15/virtualbox-error/"/>
       <url>/2019/11/15/virtualbox-error/</url>
@@ -134,9 +163,9 @@
       
         <tags>
             
-            <tag> postgresql </tag>
-            
             <tag> install </tag>
+            
+            <tag> postgresql </tag>
             
             <tag> windows </tag>
             
