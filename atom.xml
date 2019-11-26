@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lin-zone.github.io/"/>
-  <updated>2019-11-26T17:03:53.588Z</updated>
+  <updated>2019-11-26T17:22:49.793Z</updated>
   <id>https://lin-zone.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Linux上安装Miniconda</title>
+    <link href="https://lin-zone.github.io/2019/11/27/miniconda-install/"/>
+    <id>https://lin-zone.github.io/2019/11/27/miniconda-install/</id>
+    <published>2019-11-26T17:14:05.000Z</published>
+    <updated>2019-11-26T17:22:49.793Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;Anaconda是一个开源的Python包管理器，而Miniconda则是轻量级的Anaconda&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Package" scheme="https://lin-zone.github.io/categories/Package/"/>
+    
+    
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
+    
+      <category term="conda" scheme="https://lin-zone.github.io/tags/conda/"/>
+    
+      <category term="linux" scheme="https://lin-zone.github.io/tags/linux/"/>
+    
+      <category term="ubuntu" scheme="https://lin-zone.github.io/tags/ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Gitolite搭建Git服务器</title>
@@ -42,11 +77,11 @@
       <category term="Git" scheme="https://lin-zone.github.io/categories/Git/"/>
     
     
-      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
-    
       <category term="git" scheme="https://lin-zone.github.io/tags/git/"/>
     
       <category term="server" scheme="https://lin-zone.github.io/tags/server/"/>
+    
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
     
   </entry>
   

@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>在Linux上安装Miniconda</title>
+      <link href="/2019/11/27/miniconda-install/"/>
+      <url>/2019/11/27/miniconda-install/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Anaconda是一个开源的Python包管理器，而Miniconda则是轻量级的Anaconda</p></blockquote><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank" rel="noopener">官网地址</a></p><pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">wget</span><span class="token function">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></pre><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">bash</span> Miniconda3-latest-Linux-x86_64.sh</code></pre><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 一直按回车然后输入yes</span>please answer <span class="token string">'yes'</span> or <span class="token string">'no'</span><span class="token keyword">:</span><span class="token operator">>></span><span class="token operator">></span> <span class="token function">yes</span><span class="token comment" spellcheck="true"># 选择安装路径, 文件名前加点号表示隐藏文件</span>Miniconda3 will now be installed into this location:<span class="token operator">>></span><span class="token operator">></span> ~/.miniconda3<span class="token comment" spellcheck="true"># 添加配置信息到 ~/.bashrc文件</span>Do you wish the installer to initialize Miniconda3 by running conda init? <span class="token punctuation">[</span>yes<span class="token operator">|</span>no<span class="token punctuation">]</span><span class="token punctuation">[</span>no<span class="token punctuation">]</span> <span class="token operator">>></span><span class="token operator">></span> <span class="token function">yes</span></code></pre><p>运行配置信息文件或重启电脑</p><pre class=" language-bash"><code class="language-bash"><span class="token function">source</span> ~/.bashrc</code></pre><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>测试是否安装成功</p><pre class=" language-bash"><code class="language-bash">conda --version</code></pre><p>创建虚拟环境</p><pre class=" language-bash"><code class="language-bash">conda create -n venv python<span class="token operator">=</span>3.6</code></pre><p>激活虚拟环境</p><pre class=" language-bash"><code class="language-bash">conda activate venv</code></pre><p>退出虚拟环境</p><pre class=" language-bash"><code class="language-bash">conda deactivate</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Package </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> install </tag>
+            
+            <tag> conda </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用Gitolite搭建Git服务器</title>
       <link href="/2019/11/27/gitolite/"/>
       <url>/2019/11/27/gitolite/</url>
@@ -20,11 +51,11 @@
       
         <tags>
             
-            <tag> install </tag>
-            
             <tag> git </tag>
             
             <tag> server </tag>
+            
+            <tag> install </tag>
             
         </tags>
       
