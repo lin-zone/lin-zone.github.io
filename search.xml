@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>修改host解决gist.github.com无法访问的问题</title>
+      <link href="/2019/11/27/access-gist/"/>
+      <url>/2019/11/27/access-gist/</url>
+      
+        <content type="html"><![CDATA[<p>修改<code>hosts</code>文件，添加以下内容</p><pre class=" language-bash"><code class="language-bash">192.30.253.118 gist.github.com192.30.253.119 gist.github.com</code></pre><p><code>hosts</code>文件路径</p><ul><li>Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></li><li>Linux: <code>/etc/hosts</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Questions </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gist </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在Linux上安装Miniconda</title>
       <link href="/2019/11/27/miniconda-install/"/>
       <url>/2019/11/27/miniconda-install/</url>
@@ -73,7 +100,7 @@
       
       <categories>
           
-          <category> VirtualBox </category>
+          <category> Questions </category>
           
       </categories>
       
@@ -85,6 +112,8 @@
             <tag> hyper-v </tag>
             
             <tag> window10 </tag>
+            
+            <tag> virtualbox </tag>
             
         </tags>
       
