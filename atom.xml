@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lin-zone.github.io/"/>
-  <updated>2019-11-26T17:37:48.322Z</updated>
+  <updated>2019-12-03T13:16:22.812Z</updated>
   <id>https://lin-zone.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用PuTTY从Linux服务器上下载文件</title>
+    <link href="https://lin-zone.github.io/2019/12/03/pscp/"/>
+    <id>https://lin-zone.github.io/2019/12/03/pscp/</id>
+    <published>2019-12-03T13:02:01.000Z</published>
+    <updated>2019-12-03T13:16:22.812Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;下载PuTTY&quot;&gt;&lt;a href=&quot;#下载PuTTY&quot; class=&quot;headerlink&quot; title=&quot;下载PuTTY&quot;&gt;&lt;/a&gt;下载PuTTY&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.putty.org/&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://lin-zone.github.io/categories/Linux/"/>
+    
+    
+      <category term="putty" scheme="https://lin-zone.github.io/tags/putty/"/>
+    
+      <category term="pscp" scheme="https://lin-zone.github.io/tags/pscp/"/>
+    
+  </entry>
   
   <entry>
     <title>修改host解决gist.github.com无法访问的问题</title>

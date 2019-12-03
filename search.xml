@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>使用PuTTY从Linux服务器上下载文件</title>
+      <link href="/2019/12/03/pscp/"/>
+      <url>/2019/12/03/pscp/</url>
+      
+        <content type="html"><![CDATA[<h3 id="下载PuTTY"><a href="#下载PuTTY" class="headerlink" title="下载PuTTY"></a>下载PuTTY</h3><ul><li><a href="https://www.putty.org/" target="_blank" rel="noopener">官网下载</a></li></ul><h3 id="使用pscp"><a href="#使用pscp" class="headerlink" title="使用pscp"></a>使用pscp</h3><ol><li><p>测试<code>pscp</code>是否可用, 在Windows命令行下输入</p><pre class=" language-sh"><code class="language-sh"> pscp -V</code></pre></li><li><p>从Linux服务器上下载文件</p><pre class=" language-sh"><code class="language-sh"> pscp [user@]host:source target</code></pre><ul><li><code>user</code>: 登录服务器的用户名</li><li><code>host</code>: 服务器IP</li><li><code>source</code>: 文件在服务器上的路径</li><li><code>target</code>: 本地保存路径</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> putty </tag>
+            
+            <tag> pscp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>修改host解决gist.github.com无法访问的问题</title>
       <link href="/2019/11/27/access-gist/"/>
       <url>/2019/11/27/access-gist/</url>
