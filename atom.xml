@@ -46,6 +46,180 @@
   </entry>
   
   <entry>
+    <title>Git 命令速查</title>
+    <link href="https://lin-zone.github.io/2019/11/27/git-cmd/"/>
+    <id>https://lin-zone.github.io/2019/11/27/git-cmd/</id>
+    <published>2019-11-27T08:41:24.000Z</published>
+    <updated>2019-12-03T13:18:40.176Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;设置姓名和邮箱地址&quot;&gt;&lt;a href=&quot;#设置姓名和邮箱地址&quot; class=&quot;headerlink&quot; title=&quot;设置姓名和邮箱地址&quot;&gt;&lt;/a&gt;设置姓名和邮箱地址&lt;/h3&gt;&lt;pre class=&quot; language-bash&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="https://lin-zone.github.io/categories/Git/"/>
+    
+    
+      <category term="命令速查" scheme="https://lin-zone.github.io/tags/%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker快速入门</title>
+    <link href="https://lin-zone.github.io/2019/11/27/docker-quickstart/"/>
+    <id>https://lin-zone.github.io/2019/11/27/docker-quickstart/</id>
+    <published>2019-11-27T03:06:00.000Z</published>
+    <updated>2019-12-03T13:18:40.176Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Windows-10-安装&quot;&gt;&lt;a href=&quot;#Windows-10-安装&quot; class=&quot;headerlink&quot; title=&quot;Windows 10 安装&quot;&gt;&lt;/a&gt;Windows 10 安装&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;下载&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="https://lin-zone.github.io/categories/Docker/"/>
+    
+    
+      <category term="命令速查" scheme="https://lin-zone.github.io/tags/%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
+    
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
+    
+      <category term="windows" scheme="https://lin-zone.github.io/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pip 命令速查</title>
+    <link href="https://lin-zone.github.io/2019/11/27/pip-cmd/"/>
+    <id>https://lin-zone.github.io/2019/11/27/pip-cmd/</id>
+    <published>2019-11-27T02:50:54.000Z</published>
+    <updated>2019-12-03T13:18:40.177Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;&lt;code&gt;pip install [package]&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;卸载&quot;&gt;&lt;a href=&quot;#卸载&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://lin-zone.github.io/categories/Python/"/>
+    
+    
+      <category term="pip" scheme="https://lin-zone.github.io/tags/pip/"/>
+    
+      <category term="命令速查" scheme="https://lin-zone.github.io/tags/%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>发布Python模块到PyPI</title>
+    <link href="https://lin-zone.github.io/2019/11/27/distribute-module/"/>
+    <id>https://lin-zone.github.io/2019/11/27/distribute-module/</id>
+    <published>2019-11-27T02:20:05.000Z</published>
+    <updated>2019-12-03T13:18:40.176Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目结构&quot;&gt;&lt;a href=&quot;#项目结构&quot; class=&quot;headerlink&quot; title=&quot;项目结构&quot;&gt;&lt;/a&gt;项目结构&lt;/h2&gt;&lt;pre class=&quot; language-bash&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="Package" scheme="https://lin-zone.github.io/categories/Package/"/>
+    
+    
+      <category term="python" scheme="https://lin-zone.github.io/tags/python/"/>
+    
+      <category term="pypi" scheme="https://lin-zone.github.io/tags/pypi/"/>
+    
+      <category term="setup" scheme="https://lin-zone.github.io/tags/setup/"/>
+    
+      <category term="pip" scheme="https://lin-zone.github.io/tags/pip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>conda 命令速查</title>
+    <link href="https://lin-zone.github.io/2019/11/27/conda-cmd/"/>
+    <id>https://lin-zone.github.io/2019/11/27/conda-cmd/</id>
+    <published>2019-11-27T02:07:38.000Z</published>
+    <updated>2019-12-03T13:18:40.175Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;创建环境&quot;&gt;&lt;a href=&quot;#创建环境&quot; class=&quot;headerlink&quot; title=&quot;创建环境&quot;&gt;&lt;/a&gt;创建环境&lt;/h3&gt;&lt;p&gt;&lt;code&gt;conda create -n &amp;lt;env_name&amp;gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Package" scheme="https://lin-zone.github.io/categories/Package/"/>
+    
+    
+      <category term="conda" scheme="https://lin-zone.github.io/tags/conda/"/>
+    
+      <category term="命令速查" scheme="https://lin-zone.github.io/tags/%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>argparse模块</title>
+    <link href="https://lin-zone.github.io/2019/11/27/argparse/"/>
+    <id>https://lin-zone.github.io/2019/11/27/argparse/</id>
+    <published>2019-11-27T01:43:24.000Z</published>
+    <updated>2019-12-03T13:18:40.175Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;基本操作&quot;&gt;&lt;a href=&quot;#基本操作&quot; class=&quot;headerlink&quot; title=&quot;基本操作&quot;&gt;&lt;/a&gt;基本操作&lt;/h3&gt;&lt;pre class=&quot; language-python&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://lin-zone.github.io/categories/Python/"/>
+    
+    
+      <category term="标准库" scheme="https://lin-zone.github.io/tags/%E6%A0%87%E5%87%86%E5%BA%93/"/>
+    
+      <category term="命令行" scheme="https://lin-zone.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>修改host解决gist.github.com无法访问的问题</title>
     <link href="https://lin-zone.github.io/2019/11/27/access-gist/"/>
     <id>https://lin-zone.github.io/2019/11/27/access-gist/</id>
@@ -100,9 +274,9 @@
       <category term="Package" scheme="https://lin-zone.github.io/categories/Package/"/>
     
     
-      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
-    
       <category term="conda" scheme="https://lin-zone.github.io/tags/conda/"/>
+    
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
     
       <category term="linux" scheme="https://lin-zone.github.io/tags/linux/"/>
     
@@ -384,11 +558,11 @@
       <category term="Python" scheme="https://lin-zone.github.io/categories/Python/"/>
     
     
+      <category term="python" scheme="https://lin-zone.github.io/tags/python/"/>
+    
       <category term="graphviz" scheme="https://lin-zone.github.io/tags/graphviz/"/>
     
       <category term="pyreverse" scheme="https://lin-zone.github.io/tags/pyreverse/"/>
-    
-      <category term="python" scheme="https://lin-zone.github.io/tags/python/"/>
     
       <category term="uml" scheme="https://lin-zone.github.io/tags/uml/"/>
     
