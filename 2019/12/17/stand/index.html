@@ -4,13 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="修改host解决gist.github.com无法访问的问题, Python">
-    <meta name="description" content="修改hosts文件，添加以下内容
-192.30.253.118 gist.github.com
-192.30.253.119 gist.github.com
-hosts文件路径
-
-Windows: C:\Windows\System32\d">
+    <meta name="keywords" content="一个易用的IP代理池, Python">
+    <meta name="description" content="写爬虫时常常会遇到各种反爬虫手段, 封 IP 就是比较常见的反爬策略
+遇到这种情况就需要用到代理 IP, 好用的代理通常需要花钱买, 而免费的代理经常容易失效, 所以就需要自己搭建 IP 代理池, 来获取免费高效的代理 IP. 下面介绍一个">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +14,7 @@ Windows: C:\Windows\System32\d">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>修改host解决gist.github.com无法访问的问题 | 夜不能寐</title>
+    <title>一个易用的IP代理池 | 夜不能寐</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -184,13 +180,13 @@ Windows: C:\Windows\System32\d">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        修改host解决gist.github.com无法访问的问题
+                        一个易用的IP代理池
                     </div>
                 </div>
             </div>
@@ -301,12 +297,16 @@ Windows: C:\Windows\System32\d">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/gist/" target="_blank">
-                                <span class="chip bg-color">gist</span>
+                            <a href="/tags/proxypool/" target="_blank">
+                                <span class="chip bg-color">proxypool</span>
                             </a>
                         
-                            <a href="/tags/github/" target="_blank">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/crawler/" target="_blank">
+                                <span class="chip bg-color">crawler</span>
+                            </a>
+                        
+                            <a href="/tags/scrapy/" target="_blank">
+                                <span class="chip bg-color">scrapy</span>
                             </a>
                         
                     </div>
@@ -317,8 +317,8 @@ Windows: C:\Windows\System32\d">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Questions/" class="post-category" target="_blank">
-                                Questions
+                            <a href="/categories/Project/" class="post-category" target="_blank">
+                                Project
                             </a>
                         
                     </div>
@@ -329,14 +329,14 @@ Windows: C:\Windows\System32\d">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-27
+                    2019-12-17
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        40
+                        411
                     </div>
                     
 
@@ -354,14 +354,56 @@ Windows: C:\Windows\System32\d">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>修改<code>hosts</code>文件，添加以下内容</p>
-<pre class=" language-bash"><code class="language-bash">192.30.253.118 gist.github.com
-192.30.253.119 gist.github.com</code></pre>
-<p><code>hosts</code>文件路径</p>
+                <p>写爬虫时常常会遇到各种反爬虫手段, 封 IP 就是比较常见的反爬策略</p>
+<p>遇到这种情况就需要用到代理 IP, 好用的代理通常需要花钱买, 而免费的代理经常容易失效, 所以就需要自己搭建 IP 代理池, 来获取免费高效的代理 IP. 下面介绍一个自己写的 IP 代理池, 欢迎 star</p>
 <ul>
-<li>Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></li>
-<li>Linux: <code>/etc/hosts</code></li>
+<li><a href="https://github.com/lin-zone/stand" target="_blank" rel="noopener">lin-zone/stand</a></li>
 </ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class=" language-bash"><code class="language-bash">pip <span class="token function">install</span> stand</code></pre>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><pre class=" language-bash"><code class="language-bash">stand</code></pre>
+<p>启动后, 爬虫会从代理网站抓取 IP, 并将数据保存在名为 stand.db 的 SQLite 数据库中, 等待爬虫抓取一定数量 IP 后, 即可使用代理</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">from</span> stand <span class="token keyword">import</span> get_proxy
+<span class="token operator">>></span><span class="token operator">></span> proxy <span class="token operator">=</span> get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span>
+<span class="token string">'103.133.222.151:8080'</span></code></pre>
+<p>在 Scrapy 中使用 stand 作为代理</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> scrapy
+<span class="token keyword">from</span> scrapy<span class="token punctuation">.</span>crawler <span class="token keyword">import</span> CrawlerProcess
+
+
+<span class="token keyword">class</span> <span class="token class-name">TestSpider</span><span class="token punctuation">(</span>scrapy<span class="token punctuation">.</span>Spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> <span class="token string">'test'</span>
+    start_urls <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'https://api.ip.sb/ip'</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">parse</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'proxy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+
+
+DOWNLOADER_MIDDLEWARES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'stand.UserAgentMiddleware'</span><span class="token punctuation">:</span> <span class="token number">543</span><span class="token punctuation">,</span>
+    <span class="token string">'stand.ProxyMiddleware'</span><span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+settings <span class="token operator">=</span> dict<span class="token punctuation">(</span>
+    LOG_ENABLED<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>
+    DOWNLOAD_TIMEOUT<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">,</span>
+    DOWNLOADER_MIDDLEWARES<span class="token operator">=</span>DOWNLOADER_MIDDLEWARES<span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    process <span class="token operator">=</span> CrawlerProcess<span class="token punctuation">(</span>settings<span class="token punctuation">)</span>
+    process<span class="token punctuation">.</span>crawl<span class="token punctuation">(</span>TestSpider<span class="token punctuation">)</span>
+    process<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    run<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h2 id="项目说明"><a href="#项目说明" class="headerlink" title="项目说明"></a>项目说明</h2><ol>
+<li>当启动 stand 时, 首先会运行 crawl 函数从代理网站爬取代理 IP, 并将爬取到的结果存储在名为 stand.db (可通过 STAND_DIR 环境变量设置保存目录) 的 SQLite 数据库中, 每个 IP 有一个初始分数 2</li>
+<li>然后会运行 validate 函数验证代理 IP 的有效性, 验证通过分数设置为最高值 3, 验证失败分数减 1, 当分数为 0 时删除该 IP</li>
+<li>之后会定时运行 crawl 和 validate 函数分别爬取和验证 IP, 每20分钟爬取一次 IP, 每60分钟验证一次 IP</li>
+</ol>
 
             </div>
             <hr/>
@@ -399,53 +441,57 @@ Windows: C:\Windows\System32\d">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/27/argparse/">
+                <a href="/2019/12/17/stand/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="argparse模块">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="一个易用的IP代理池">
                         
-                        <span class="card-title">argparse模块</span>
+                        <span class="card-title">一个易用的IP代理池</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            基本操作import argparse                                 # 导入模块
-
-parser = argparse.ArgumentParser()              # 创建解析对象
-par
+                            写爬虫时常常会遇到各种反爬虫手段, 封 IP 就是比较常见的反爬策略
+遇到这种情况就需要用到代理 IP, 好用的代理通常需要花钱买, 而免费的代理经常容易失效, 所以就需要自己搭建 IP 代理池, 来获取免费高效的代理 IP. 下面介绍一个
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                    Python
+                            <a href="/categories/Project/" class="post-category" target="_blank">
+                                    Project
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/标准库/" target="_blank">
-                        <span class="chip bg-color">标准库</span>
+                    <a href="/tags/proxypool/" target="_blank">
+                        <span class="chip bg-color">proxypool</span>
                     </a>
                     
-                    <a href="/tags/命令行/" target="_blank">
-                        <span class="chip bg-color">命令行</span>
+                    <a href="/tags/crawler/" target="_blank">
+                        <span class="chip bg-color">crawler</span>
+                    </a>
+                    
+                    <a href="/tags/scrapy/" target="_blank">
+                        <span class="chip bg-color">scrapy</span>
                     </a>
                     
                 </div>
@@ -459,36 +505,41 @@ par
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/27/miniconda-install/">
+                <a href="/2019/12/03/pscp/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="在Linux上安装Miniconda">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="使用PuTTY从Linux服务器上下载文件">
                         
-                        <span class="card-title">在Linux上安装Miniconda</span>
+                        <span class="card-title">使用PuTTY从Linux服务器上下载文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-Anaconda是一个开源的Python包管理器，而Miniconda则是轻量级的Anaconda
+                            下载PuTTY
+官网下载
 
-下载官网地址
-sudo apt-get install wget
-wget https://repo.anaconda.com/mini
+使用pscp
+测试pscp是否可用, 在Windows命令行下输入
+ pscp -V
+
+从Linux服务器上下载文件
+ pscp [user@]host:source target
+
+user: 登录服务器的用户
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Package/" class="post-category" target="_blank">
-                                    Package
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
                                 </a>
                             
                             
@@ -498,20 +549,12 @@ wget https://repo.anaconda.com/mini
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/conda/" target="_blank">
-                        <span class="chip bg-color">conda</span>
+                    <a href="/tags/putty/" target="_blank">
+                        <span class="chip bg-color">putty</span>
                     </a>
                     
-                    <a href="/tags/install/" target="_blank">
-                        <span class="chip bg-color">install</span>
-                    </a>
-                    
-                    <a href="/tags/linux/" target="_blank">
-                        <span class="chip bg-color">linux</span>
-                    </a>
-                    
-                    <a href="/tags/ubuntu/" target="_blank">
-                        <span class="chip bg-color">ubuntu</span>
+                    <a href="/tags/pscp/" target="_blank">
+                        <span class="chip bg-color">pscp</span>
                     </a>
                     
                 </div>

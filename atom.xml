@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lin-zone.github.io/"/>
-  <updated>2019-12-03T13:16:22.812Z</updated>
+  <updated>2019-12-17T06:01:31.521Z</updated>
   <id>https://lin-zone.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个易用的IP代理池</title>
+    <link href="https://lin-zone.github.io/2019/12/17/stand/"/>
+    <id>https://lin-zone.github.io/2019/12/17/stand/</id>
+    <published>2019-12-17T05:36:03.000Z</published>
+    <updated>2019-12-17T06:01:31.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;写爬虫时常常会遇到各种反爬虫手段, 封 IP 就是比较常见的反爬策略&lt;/p&gt;
+&lt;p&gt;遇到这种情况就需要用到代理 IP, 好用的代理通常需要花钱买, 而免费的代理经常容易失效, 所以就需要自己搭建 IP 代理池, 来获取免费高效的代理 IP. 下面介绍一个自己写的 IP
+        
+      
+    
+    </summary>
+    
+      <category term="Project" scheme="https://lin-zone.github.io/categories/Project/"/>
+    
+    
+      <category term="proxypool" scheme="https://lin-zone.github.io/tags/proxypool/"/>
+    
+      <category term="crawler" scheme="https://lin-zone.github.io/tags/crawler/"/>
+    
+      <category term="scrapy" scheme="https://lin-zone.github.io/tags/scrapy/"/>
+    
+  </entry>
   
   <entry>
     <title>使用PuTTY从Linux服务器上下载文件</title>
@@ -125,9 +156,9 @@
       <category term="Python" scheme="https://lin-zone.github.io/categories/Python/"/>
     
     
-      <category term="pip" scheme="https://lin-zone.github.io/tags/pip/"/>
-    
       <category term="命令速查" scheme="https://lin-zone.github.io/tags/%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/"/>
+    
+      <category term="pip" scheme="https://lin-zone.github.io/tags/pip/"/>
     
   </entry>
   
@@ -310,11 +341,11 @@
       <category term="Git" scheme="https://lin-zone.github.io/categories/Git/"/>
     
     
+      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
+    
       <category term="git" scheme="https://lin-zone.github.io/tags/git/"/>
     
       <category term="server" scheme="https://lin-zone.github.io/tags/server/"/>
-    
-      <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
     
   </entry>
   
@@ -470,9 +501,9 @@
     
       <category term="install" scheme="https://lin-zone.github.io/tags/install/"/>
     
-      <category term="postgresql" scheme="https://lin-zone.github.io/tags/postgresql/"/>
-    
       <category term="windows" scheme="https://lin-zone.github.io/tags/windows/"/>
+    
+      <category term="postgresql" scheme="https://lin-zone.github.io/tags/postgresql/"/>
     
       <category term="database" scheme="https://lin-zone.github.io/tags/database/"/>
     

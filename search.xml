@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>一个易用的IP代理池</title>
+      <link href="/2019/12/17/stand/"/>
+      <url>/2019/12/17/stand/</url>
+      
+        <content type="html"><![CDATA[<p>写爬虫时常常会遇到各种反爬虫手段, 封 IP 就是比较常见的反爬策略</p><p>遇到这种情况就需要用到代理 IP, 好用的代理通常需要花钱买, 而免费的代理经常容易失效, 所以就需要自己搭建 IP 代理池, 来获取免费高效的代理 IP. 下面介绍一个自己写的 IP 代理池, 欢迎 star</p><ul><li><a href="https://github.com/lin-zone/stand" target="_blank" rel="noopener">lin-zone/stand</a></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class=" language-bash"><code class="language-bash">pip <span class="token function">install</span> stand</code></pre><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><pre class=" language-bash"><code class="language-bash">stand</code></pre><p>启动后, 爬虫会从代理网站抓取 IP, 并将数据保存在名为 stand.db 的 SQLite 数据库中, 等待爬虫抓取一定数量 IP 后, 即可使用代理</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">from</span> stand <span class="token keyword">import</span> get_proxy<span class="token operator">>></span><span class="token operator">></span> proxy <span class="token operator">=</span> get_proxy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span><span class="token string">'103.133.222.151:8080'</span></code></pre><p>在 Scrapy 中使用 stand 作为代理</p><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> scrapy<span class="token keyword">from</span> scrapy<span class="token punctuation">.</span>crawler <span class="token keyword">import</span> CrawlerProcess<span class="token keyword">class</span> <span class="token class-name">TestSpider</span><span class="token punctuation">(</span>scrapy<span class="token punctuation">.</span>Spider<span class="token punctuation">)</span><span class="token punctuation">:</span>    name <span class="token operator">=</span> <span class="token string">'test'</span>    start_urls <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'https://api.ip.sb/ip'</span><span class="token punctuation">]</span>    <span class="token keyword">def</span> <span class="token function">parse</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'proxy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>        <span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>text<span class="token punctuation">)</span>DOWNLOADER_MIDDLEWARES <span class="token operator">=</span> <span class="token punctuation">{</span>    <span class="token string">'stand.UserAgentMiddleware'</span><span class="token punctuation">:</span> <span class="token number">543</span><span class="token punctuation">,</span>    <span class="token string">'stand.ProxyMiddleware'</span><span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span><span class="token punctuation">}</span>settings <span class="token operator">=</span> dict<span class="token punctuation">(</span>    LOG_ENABLED<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>    DOWNLOAD_TIMEOUT<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">,</span>    DOWNLOADER_MIDDLEWARES<span class="token operator">=</span>DOWNLOADER_MIDDLEWARES<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    process <span class="token operator">=</span> CrawlerProcess<span class="token punctuation">(</span>settings<span class="token punctuation">)</span>    process<span class="token punctuation">.</span>crawl<span class="token punctuation">(</span>TestSpider<span class="token punctuation">)</span>    process<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>    run<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><h2 id="项目说明"><a href="#项目说明" class="headerlink" title="项目说明"></a>项目说明</h2><ol><li>当启动 stand 时, 首先会运行 crawl 函数从代理网站爬取代理 IP, 并将爬取到的结果存储在名为 stand.db (可通过 STAND_DIR 环境变量设置保存目录) 的 SQLite 数据库中, 每个 IP 有一个初始分数 2</li><li>然后会运行 validate 函数验证代理 IP 的有效性, 验证通过分数设置为最高值 3, 验证失败分数减 1, 当分数为 0 时删除该 IP</li><li>之后会定时运行 crawl 和 validate 函数分别爬取和验证 IP, 每20分钟爬取一次 IP, 每60分钟验证一次 IP</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Project </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> proxypool </tag>
+            
+            <tag> crawler </tag>
+            
+            <tag> scrapy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用PuTTY从Linux服务器上下载文件</title>
       <link href="/2019/12/03/pscp/"/>
       <url>/2019/12/03/pscp/</url>
@@ -101,9 +130,9 @@
       
         <tags>
             
-            <tag> pip </tag>
-            
             <tag> 命令速查 </tag>
+            
+            <tag> pip </tag>
             
         </tags>
       
@@ -271,11 +300,11 @@
       
         <tags>
             
+            <tag> install </tag>
+            
             <tag> git </tag>
             
             <tag> server </tag>
-            
-            <tag> install </tag>
             
         </tags>
       
@@ -418,9 +447,9 @@
             
             <tag> install </tag>
             
-            <tag> postgresql </tag>
-            
             <tag> windows </tag>
+            
+            <tag> postgresql </tag>
             
             <tag> database </tag>
             
